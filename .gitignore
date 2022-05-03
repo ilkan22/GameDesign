@@ -12,8 +12,8 @@
 [Uu]nityGenerated/
 [Uu]ser[Ss]ettings/
 
-ProjectSettings/ProjectVersion.txt
-[Pp]rojectSettings/ProjectVersion.txt
+/ProjectSettings/ProjectVersion.txt
+/[Pp]rojectSettings/ProjectVersion.txt
 
 # file on crash reports
 sysinfo.txt
