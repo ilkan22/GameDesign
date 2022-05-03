@@ -6,8 +6,15 @@
 [Ll]ibrary/
 [Ll]ocal[Cc]ache/
 [Oo]bj/
+/[Ll]ogs/
+[Ll]ogs/
 [Tt]emp/
 [Uu]nityGenerated/
+[Uu]ser[Ss]ettings/
+
+/ProjectSettings/ProjectVersion.txt
+/[Pp]rojectSettings/ProjectVersion.txt
+
 # file on crash reports
 sysinfo.txt
 # Unity3D generated meta files
@@ -39,3 +46,5 @@ sysinfo.txt
 Icon?
 ehthumbs.db
 Thumbs.db
+*.log
+Game Design/ProjectSettings/ProjectVersion.txt
