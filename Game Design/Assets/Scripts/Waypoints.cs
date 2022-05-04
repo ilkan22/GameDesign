@@ -6,9 +6,9 @@ public class Waypoints : MonoBehaviour
 {
     public static Transform[] waypoints;
 
+    //Lädt die waypoints auf dem Weg in ein Array
     void Awake()
     {
-        Debug.Log("test");
         waypoints = new Transform[transform.childCount];
         for (int i = 0; i < waypoints.Length; i++)
         {

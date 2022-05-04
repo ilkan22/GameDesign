@@ -7,7 +7,7 @@ public class EnemyMovement : MonoBehaviour
     public float speed = 5f;
 
     private Transform target;
-    private int wavepointIndex = 0;
+    private int waypointIndex = 0;
 
     private void Start()
     {
@@ -16,24 +16,25 @@ public class EnemyMovement : MonoBehaviour
 
     private void Update()
     {
-        Vector3 direction = target.position - transform.position;
-        transform.Translate(direction.normalized*speed*Time.deltaTime, Space.World);
+        Vector3 direction = target.position - transform.position;   //Richtungsvektor für den Gegner
+        transform.Translate(direction.normalized*speed*Time.deltaTime, Space.World); // Bewegt sich richtung Richtungsvektor
 
-        if (Vector3.Distance(transform.position, target.position) <= 0.4f)
+        if (Vector3.Distance(transform.position, target.position) <= 0.4f)  // Gegner erreicht den Waypoint
         {
             GetNextWayPoint();
         }
     }
 
+    //Nimmt den nächsten waypoint aus dem Array
     void GetNextWayPoint()
     {
-        if (wavepointIndex >= Waypoints.waypoints.Length - 1)
+        if (waypointIndex >= Waypoints.waypoints.Length - 1)
         {
             Destroy(gameObject);
             return;
         }
 
-        wavepointIndex++;
-        target = Waypoints.waypoints[wavepointIndex];
+        waypointIndex++;
+        target = Waypoints.waypoints[waypointIndex];
     }
 }
