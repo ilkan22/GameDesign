@@ -16,7 +16,7 @@ public class Turret : MonoBehaviour
     [Header("SetUp")]
     public string enemyTag = "Enemy";
     public Transform partToRotate;
-    public GameObject bulletPrefab;
+    public GameObject projectilePrefab;
     public Transform firePoint;
   
 
@@ -29,7 +29,7 @@ public class Turret : MonoBehaviour
         
     }
 
-    // Gegngersuche
+    // Gegnersuche
     void UpdateTarget()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
@@ -47,13 +47,9 @@ public class Turret : MonoBehaviour
         }
 
         if (nearestEnemy != null && shortestDistanceToEnemy <= range)
-        {
             target = nearestEnemy.transform;
-        }
         else
-        {
             target = null;
-        }
     }
 
     // Update is called once per frame
@@ -80,12 +76,10 @@ public class Turret : MonoBehaviour
 
     void Shoot()
     {
-        GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        GameObject bulletGO = (GameObject)Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
         if (bullet != null)
-        {
             bullet.Seek(target);
-        }
     }
 
     void OnDrawGizmosSelected()

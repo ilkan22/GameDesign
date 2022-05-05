@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,7 @@ public class BuildManager : MonoBehaviour
     // EIN Buildmanager für alle Nodes
     public static BuildManager BuildmanagerInstance;
 
+    //Awake nur für Singleton-Instance
     private void Awake()
     {
         if (BuildmanagerInstance != null)
@@ -18,16 +20,31 @@ public class BuildManager : MonoBehaviour
     }
 
     public GameObject standardTurretPrefab;
+    public GameObject missileLauncherTurretPrefab;
 
-    private void Start()
+    private TurretBlueprint turretToBuild;
+
+    public bool CanBuild { get { return turretToBuild != null; } }
+    public bool HasMoney { get { return PlayerStats.Money >= turretToBuild.cost; } }
+
+    public void BuildTurretOn (Node node)
     {
-        turretToBuild = standardTurretPrefab;
+        if (PlayerStats.Money < turretToBuild.cost)
+        {
+            Debug.Log("No Moneeey!!!");
+            return;
+        }
+
+        PlayerStats.Money -= turretToBuild.cost;
+
+        GameObject turret = (GameObject)Instantiate(turretToBuild.prefab, node.GetBuildPosition(), Quaternion.identity);
+        node.turret = turret;
+
+        Debug.Log("Turret Build! Money Left: " + PlayerStats.Money);
     }
 
-    private GameObject turretToBuild;
-
-    public GameObject GetTurretToBuild ()
+    public void SelectTurretToBuild(TurretBlueprint turret)
     {
-        return turretToBuild;
+        turretToBuild = turret;
     }
 }

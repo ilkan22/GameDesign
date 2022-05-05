@@ -28,6 +28,7 @@ public class CameraController : MonoBehaviour
             return;
 
         //Kamerebewegung um 90Grad gedreht weil das Level von der Haupkamera gedreht ist
+        //Deswegen "w" Vector3.right e.t.c
         if (Input.GetKey("w") || Input.mousePosition.y >= Screen.height - panBorderThickness)
             transform.Translate(Vector3.right * panSpeed * Time.deltaTime, Space.World);
         
