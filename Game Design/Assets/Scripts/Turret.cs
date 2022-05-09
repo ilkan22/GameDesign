@@ -1,24 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
     private Transform target;
+    private Enemy targetEnemy;
 
-    [Header("Attributes")]
+    [Header("General")]
     public float range = 10f;
+
+    [Header("Bullet(Default)")]
     public float fireRate = 1f;
-    public float turnSpeed = 10f;
-    public float targetUpdateTime = 0.5f;
     private float fireCountdown = 0f;
+    public GameObject projectilePrefab;
+
+    [Header("Laser")]
+    public bool useLaser = false;
+    public int damageOverTime = 30;
+    public float slowAmount = 0.5f;
+    public LineRenderer lineRenderer;
+    public ParticleSystem impactEffect;
+    public Light impactLight;
 
     [Header("SetUp")]
     public string enemyTag = "Enemy";
     public Transform partToRotate;
-    public GameObject projectilePrefab;
+    public float turnSpeed = 10f;
     public Transform firePoint;
-  
+    public float targetUpdateTime = 0.5f;
+
 
 
 
@@ -47,7 +56,10 @@ public class Turret : MonoBehaviour
         }
 
         if (nearestEnemy != null && shortestDistanceToEnemy <= range)
+        {
             target = nearestEnemy.transform;
+            targetEnemy = target.GetComponent<Enemy>();
+        }
         else
             target = null;
     }
@@ -56,22 +68,63 @@ public class Turret : MonoBehaviour
     void Update()
     {
         if (target == null)
+        {
+            if (useLaser)
+                if (lineRenderer.enabled)
+                {
+                    lineRenderer.enabled = false;
+                    impactEffect.Stop();
+                    impactLight.enabled = false;
+                }
             return;
+        }
+            
 
-        //Target lock on
+        LockOnTarget();
+
+        if (useLaser)
+            Laser();
+        else
+        {
+            if (fireCountdown <= 0f)
+            {
+                Shoot();
+                fireCountdown = 1f / fireRate;
+            }
+
+            fireCountdown -= Time.deltaTime;
+        }
+    }
+
+    void LockOnTarget()
+    {
         Vector3 directionToEnemy = target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(directionToEnemy);
-        Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime*turnSpeed).eulerAngles;
+        Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
         partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+    }
 
-        if (fireCountdown <= 0f)
+    void Laser()
+    {
+        targetEnemy.TakeDamage(damageOverTime * Time.deltaTime);
+        targetEnemy.Slow(slowAmount);
+
+        //Laser und Licht An/Aus
+        if (!lineRenderer.enabled)
         {
-            Shoot();
-            fireCountdown = 1f / fireRate;
+            lineRenderer.enabled = true;
+            impactEffect.Play();
+            impactLight.enabled = true;
         }
+  
+        // Laser Position
+        lineRenderer.SetPosition(0, firePoint.position);
+        lineRenderer.SetPosition(1, target.position);
 
-        fireCountdown -= Time.deltaTime;
-
+        //Impact Effekt Position
+        Vector3 dir = firePoint.position - target.position;
+        impactEffect.transform.position = target.position + dir.normalized;
+        impactEffect.transform.rotation = Quaternion.LookRotation(dir);
     }
 
     void Shoot()

@@ -25,7 +25,9 @@ public class WaveSpawner : MonoBehaviour
         }
         countdown -= Time.deltaTime;        // zählt 1 Sekunde runter
 
-        waveCountdownText.text = Mathf.Round(countdown).ToString(); //Floor entfernt alle Dezimalstellen
+
+        countdown = Mathf.Clamp(countdown,0f, Mathf.Infinity);  //Countdown soll nicht negativ werden
+        waveCountdownText.text = string.Format("{0:00.00}",countdown); 
     }
 
     //Managet die Waves grade noch linear, sollte durch Polynomialfunktion geändert werden
@@ -33,6 +35,7 @@ public class WaveSpawner : MonoBehaviour
     IEnumerator SpawnWave()
     {
         waveIndex++;
+        PlayerStats.Rounds++;
         for (int i = 0; i < waveIndex; i++)
         {
             SpawnEnemy();
