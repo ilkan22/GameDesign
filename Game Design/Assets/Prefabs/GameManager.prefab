@@ -63,6 +63,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildEffect: {fileID: 6300268809353645298, guid: d79bbdc9ecbe0cd488a96ffefaaaea0e, type: 3}
+  sellEffect: {fileID: 321672854366241205, guid: d989c6473e751ad40ad0a6b07410b9a9, type: 3}
+  nodeUI: {fileID: 0}
 --- !u!114 &3587911616223480815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75,7 +77,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcbb9b215e365a549b6d5b170a4ddba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 400
+  startMoney: 1000
   startLives: 10
 --- !u!114 &646356564
 MonoBehaviour:

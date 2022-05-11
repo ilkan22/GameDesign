@@ -59,8 +59,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 84cc6473e8e31cb419d3cfba3b246b30, type: 2}
   - {fileID: 2100000, guid: a8a4f25f5a49e5d4da030070a5b2b0db, type: 2}
+  - {fileID: 2100000, guid: 84cc6473e8e31cb419d3cfba3b246b30, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 1351299708367880593}
   - component: {fileID: 1181130079536057720}
   m_Layer: 0
-  m_Name: MissileLauncher
+  m_Name: MissileLauncher_Upgraded1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -108,7 +108,7 @@ Transform:
   m_GameObject: {fileID: 1840590437512583979}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children:
   - {fileID: 984829706985255142}
   - {fileID: 5446989120852090787}
@@ -127,8 +127,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aa2f7d086d83ee43bd6dac68fee8be9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 20
-  fireRate: 0.25
+  range: 30
+  fireRate: 0.35
   projectilePrefab: {fileID: 5114437504195955056, guid: 0908e379c06af3644b9bc1959a6b4a1c, type: 3}
   useLaser: 0
   damageOverTime: 30
