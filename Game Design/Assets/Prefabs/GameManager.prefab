@@ -48,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 1623261626818222668, guid: cb3f5d9757ed9c249a4ea975bab14964, type: 3}
   spawnPoint: {fileID: 0}
-  timeBetweenWaves: 20
+  timeBetweenWaves: 10
   waveCountdownText: {fileID: 0}
 --- !u!114 &3587911616223480814
 MonoBehaviour:
@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startMoney: 400
-  startLives: 20
+  startLives: 10
 --- !u!114 &646356564
 MonoBehaviour:
   m_ObjectHideFlags: 0

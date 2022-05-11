@@ -232,6 +232,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StandardTurret
       objectReference: {fileID: 0}
+    - target: {fileID: 1549161933168901943, guid: 1d93601c17dc2be4f87b3732388cedea, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2176481337075475853, guid: 1d93601c17dc2be4f87b3732388cedea, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -1524,7 +1528,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1654106859
 Transform:
   m_ObjectHideFlags: 0

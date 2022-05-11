@@ -22,6 +22,6 @@ public class PlayerStats : MonoBehaviour
 
     public static void reduceLives()
     {
-
+        --Lives;
     }
 }
