@@ -28,7 +28,7 @@ public class WaveSpawner : MonoBehaviour
         }
 
         //Letzte Welle
-        if (waveIndex == waves.Length)
+        if (waveIndex == waves.Length - 1)
         {
             gameManager.WinLevel();
             this.enabled = false;
@@ -61,7 +61,6 @@ public class WaveSpawner : MonoBehaviour
             SpawnEnemy(wave.enemyPrefab);
             yield return new WaitForSeconds(1f / wave.spawnRate);  //wartet Anzahl an sekunden
         }
-
 
         waveIndex++;
     }

@@ -1621,6 +1621,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1731990348}
     - target: {fileID: 3587911616223480800, guid: 1ac3fe955ad35c84faf2e257d653cded, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3587911616223480800, guid: 1ac3fe955ad35c84faf2e257d653cded, type: 3}
       propertyPath: timeBetweenWaves
       value: 2
       objectReference: {fileID: 0}
@@ -1734,11 +1738,11 @@ PrefabInstance:
       objectReference: {fileID: 1654106860}
     - target: {fileID: 3587911616223480815, guid: 1ac3fe955ad35c84faf2e257d653cded, type: 3}
       propertyPath: startLives
-      value: 15
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 3587911616223480815, guid: 1ac3fe955ad35c84faf2e257d653cded, type: 3}
       propertyPath: startMoney
-      value: 300
+      value: 700
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ac3fe955ad35c84faf2e257d653cded, type: 3}
