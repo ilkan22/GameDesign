@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3315455104791376933}
   - component: {fileID: -7739851191160877939}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Enemy_Fast
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 2533712405827937437}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -62.5, y: 1.5, z: 9.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children:
   - {fileID: 9222636642958004709}
   m_Father: {fileID: 0}
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0f9af7d1bc98ff641b685b0275abe089, type: 2}
+  - {fileID: 2100000, guid: 78147ba417b5b0941b4f4bee24cf2e53, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -110,11 +110,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7e2c9ca65b28294e8ea3eac87d9ac71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSpeed: 10
+  startSpeed: 20
   speed: 8
-  startHealth: 100
+  startHealth: 50
   moneyGain: 50
-  deathEffect: {fileID: 6579891306957681894, guid: 13fe772782558104c89b5f9c308272b8, type: 3}
+  deathEffect: {fileID: 6579891306957681894, guid: 102625c6facc90345b02e79fcf8d3ca3, type: 3}
   healthBar: {fileID: 3102676275554959299}
 --- !u!114 &-7739851191160877939
 MonoBehaviour:
