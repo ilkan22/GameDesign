@@ -456,6 +456,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1778825289}
     m_Modifications:
     - target: {fileID: 465078625584139048, guid: cced8711b7ffb344babc7a59c7b4dd46, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465078625584139048, guid: cced8711b7ffb344babc7a59c7b4dd46, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -718,6 +722,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneFader: {fileID: 1519274030}
+  levelButtons:
+  - {fileID: 1179451705}
+  - {fileID: 1955404404}
 --- !u!4 &935801881
 Transform:
   m_ObjectHideFlags: 0
@@ -970,6 +977,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1114191697}
   m_CullTransparentMesh: 1
+--- !u!114 &1179451705 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 465078625584139048, guid: cced8711b7ffb344babc7a59c7b4dd46, type: 3}
+  m_PrefabInstance: {fileID: 5192283809767393261}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1519274030 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5584365963717612053, guid: e6ce9f73a91c5a841a6115b463f67c0f, type: 3}
@@ -1256,6 +1274,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1955404404 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 465078625584139048, guid: cced8711b7ffb344babc7a59c7b4dd46, type: 3}
+  m_PrefabInstance: {fileID: 679776818}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1955809326
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1388,6 +1417,10 @@ PrefabInstance:
     - target: {fileID: 465078625584139048, guid: cced8711b7ffb344babc7a59c7b4dd46, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1137875043427095273, guid: cced8711b7ffb344babc7a59c7b4dd46, type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2862688113245171212, guid: cced8711b7ffb344babc7a59c7b4dd46, type: 3}
       propertyPath: m_Pivot.x

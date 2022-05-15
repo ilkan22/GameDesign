@@ -18,11 +18,20 @@ public class WaveSpawner : MonoBehaviour
 
     private int waveIndex = 0;
 
+    public GameManager gameManager;
+
     private void Update()
     {
         if (EnemiesAlive > 0)
         {
             return;
+        }
+
+        //Letzte Welle
+        if (waveIndex == waves.Length)
+        {
+            gameManager.WinLevel();
+            this.enabled = false;
         }
 
         if (countdown <= 0f)
@@ -38,7 +47,6 @@ public class WaveSpawner : MonoBehaviour
         waveCountdownText.text = string.Format("{0:00.00}",countdown); 
     }
 
-    //Managet die Waves grade noch linear, sollte durch Polynomialfunktion geändert werden
     // IEnumerator ermöglicht das warten in einer Funktion
     IEnumerator SpawnWave()
     {
@@ -46,26 +54,22 @@ public class WaveSpawner : MonoBehaviour
 
         Wave wave = waves[waveIndex];
 
+        EnemiesAlive = wave.enemyCount;
+
         for (int i = 0; i < wave.enemyCount; i++)
         {
             SpawnEnemy(wave.enemyPrefab);
             yield return new WaitForSeconds(1f / wave.spawnRate);  //wartet Anzahl an sekunden
         }
 
-        waveIndex++;
 
-        if (waveIndex == waves.Length)
-        {
-            Debug.Log("LevelWon");
-            this.enabled = false;
-        }
+        waveIndex++;
     }
 
     //Spawnt Gegner an Startposition
     void SpawnEnemy(GameObject enemy)
     {
         Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
-        EnemiesAlive++;
     }
 
 }
