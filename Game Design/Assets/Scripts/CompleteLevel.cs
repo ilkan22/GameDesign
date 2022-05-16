@@ -13,6 +13,7 @@ public class CompleteLevel : MonoBehaviour
 
     public void Continue()
     {
+        WaveSpawner.EnemiesAlive = 0;
         PlayerPrefs.SetInt("levelReached", levelToUnlock);
         sceneFader.FadeTo(nextLevel);
     }

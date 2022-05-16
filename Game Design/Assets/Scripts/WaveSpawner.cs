@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class WaveSpawner : MonoBehaviour
 {
+  
     public static int EnemiesAlive = 0;
 
     public Wave[] waves;
@@ -22,8 +24,10 @@ public class WaveSpawner : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log("Update");
         if (EnemiesAlive > 0)
         {
+            Debug.Log("RETUUUUUUUUUUUUUUURN");
             return;
         }
 
@@ -36,6 +40,7 @@ public class WaveSpawner : MonoBehaviour
 
         if (countdown <= 0f)
         {
+            Debug.Log("NEUE WELLEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE!!!");
             StartCoroutine(SpawnWave());    // Coroutine ermöglicht die funktion gleichzeitig laufen zu lassen
             countdown = timeBetweenWaves;
             return;
