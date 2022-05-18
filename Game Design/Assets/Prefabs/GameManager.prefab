@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3587911616223480814}
   - component: {fileID: 3587911616223480815}
   - component: {fileID: 646356564}
+  - component: {fileID: 399782257}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -46,10 +47,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d2112aa30c028e4e9245f39443e70f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 1623261626818222668, guid: cb3f5d9757ed9c249a4ea975bab14964, type: 3}
+  waves:
+  - enemyPrefab: {fileID: 2533712405827937437, guid: cb3f5d9757ed9c249a4ea975bab14964, type: 3}
+    enemyCount: 2
+    spawnRate: 2
+  - enemyPrefab: {fileID: 2533712405827937437, guid: cb3f5d9757ed9c249a4ea975bab14964, type: 3}
+    enemyCount: 3
+    spawnRate: 2
+  - enemyPrefab: {fileID: 2533712405827937437, guid: b7b55d19457d8c34f91470732e4171f8, type: 3}
+    enemyCount: 2
+    spawnRate: 2
+  - enemyPrefab: {fileID: 2533712405827937437, guid: e10e02665d7bdec43ae9f42be402d8d2, type: 3}
+    enemyCount: 1
+    spawnRate: 2
   spawnPoint: {fileID: 0}
-  timeBetweenWaves: 10
+  timeBetweenWaves: 2
   waveCountdownText: {fileID: 0}
+  gameManager: {fileID: 646356564}
 --- !u!114 &3587911616223480814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,6 +77,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildEffect: {fileID: 6300268809353645298, guid: d79bbdc9ecbe0cd488a96ffefaaaea0e, type: 3}
+  sellEffect: {fileID: 321672854366241205, guid: d989c6473e751ad40ad0a6b07410b9a9, type: 3}
+  nodeUI: {fileID: 0}
 --- !u!114 &3587911616223480815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75,8 +91,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcbb9b215e365a549b6d5b170a4ddba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 400
-  startLives: 10
+  startMoney: 700
+  startLives: 1000
 --- !u!114 &646356564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,3 +106,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverUI: {fileID: 0}
+  completeLevelUI: {fileID: 0}
+--- !u!114 &399782257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3587911616223480803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9149fac1fd70e6d439499f1491089f6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ui: {fileID: 0}
+  menuSceneName: MainMenu
+  sceneFader: {fileID: 0}

@@ -3,25 +3,47 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class WaveSpawner : MonoBehaviour
 {
-    public Transform enemyPrefab;
+  
+    public static int EnemiesAlive = 0;
+
+    public Wave[] waves;
+
     public Transform spawnPoint;
 
     public float timeBetweenWaves = 5f;
     private float countdown = 1f;
-    private float timeBetweenEnemies = 0.5f;
 
     public Text waveCountdownText;
 
     private int waveIndex = 0;
 
+    public GameManager gameManager;
+
     private void Update()
     {
+        Debug.Log("Update");
+        if (EnemiesAlive > 0)
+        {
+            Debug.Log("RETUUUUUUUUUUUUUUURN");
+            return;
+        }
+
+        //Letzte Welle
+        if (waveIndex == waves.Length - 1)
+        {
+            gameManager.WinLevel();
+            this.enabled = false;
+        }
+
         if (countdown <= 0f)
         {
+            Debug.Log("NEUE WELLEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE!!!");
             StartCoroutine(SpawnWave());    // Coroutine ermöglicht die funktion gleichzeitig laufen zu lassen
             countdown = timeBetweenWaves;
+            return;
         }
         countdown -= Time.deltaTime;        // zählt 1 Sekunde runter
 
@@ -30,23 +52,28 @@ public class WaveSpawner : MonoBehaviour
         waveCountdownText.text = string.Format("{0:00.00}",countdown); 
     }
 
-    //Managet die Waves grade noch linear, sollte durch Polynomialfunktion geändert werden
     // IEnumerator ermöglicht das warten in einer Funktion
     IEnumerator SpawnWave()
     {
-        waveIndex++;
         PlayerStats.Rounds++;
-        for (int i = 0; i < waveIndex; i++)
+
+        Wave wave = waves[waveIndex];
+
+        EnemiesAlive = wave.enemyCount;
+
+        for (int i = 0; i < wave.enemyCount; i++)
         {
-            SpawnEnemy();
-            yield return new WaitForSeconds(timeBetweenEnemies);  //wartet Anzahl an sekunden
+            SpawnEnemy(wave.enemyPrefab);
+            yield return new WaitForSeconds(1f / wave.spawnRate);  //wartet Anzahl an sekunden
         }
+
+        waveIndex++;
     }
 
     //Spawnt Gegner an Startposition
-    void SpawnEnemy()
+    void SpawnEnemy(GameObject enemy)
     {
-        Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+        Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
     }
 
 }
