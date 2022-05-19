@@ -145,6 +145,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  fadeSfx: {fileID: 8300000, guid: f043a5f5aae9cc94b9e15f19cb5bd582, type: 3}
 --- !u!1 &5584365963888728676
 GameObject:
   m_ObjectHideFlags: 0

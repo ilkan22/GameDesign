@@ -112,3 +112,13 @@ MonoBehaviour:
   notEnoughMoneyColor: {r: 1, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
+  turretBlueprint:
+    prefab: {fileID: 0}
+    cost: 0
+    upgradedPrefab: {fileID: 0}
+    upgradeCost: 0
+    sellCost: 0
+  isUpgraded: 0
+  buyTurretSfx: {fileID: 8300000, guid: 0181fcc8a542c894a819b1220dbf4d42, type: 3}
+  upgradeTurretSfx: {fileID: 8300000, guid: 0c168a812a255414d8e9324c6ef908d2, type: 3}
+  sellTurretSfx: {fileID: 8300000, guid: 62dff6a59880f994bb6d03a75b92b699, type: 3}

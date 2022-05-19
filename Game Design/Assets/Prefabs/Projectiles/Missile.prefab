@@ -129,3 +129,4 @@ MonoBehaviour:
   speed: 30
   damage: 50
   explosionRadius: 8
+  missileLauncherExplosionSfx: {fileID: 8300000, guid: 4a89120906740c44eb8413e13978111c, type: 3}

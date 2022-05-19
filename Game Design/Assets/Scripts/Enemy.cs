@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour
 
     [Header("Unity")]
     public Image healthBar;
+    public AudioClip enemyDeathSfx;
 
     private bool isDead = false;
 
@@ -48,6 +49,7 @@ public class Enemy : MonoBehaviour
 
         PlayerStats.Money += moneyGain;
         GameObject effect = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
+        AudioSource.PlayClipAtPoint(enemyDeathSfx, Camera.main.transform.position);
 
         Destroy(effect, 5f);
 
