@@ -14,6 +14,8 @@
 
 /ProjectSettings/ProjectVersion.txt
 /[Pp]rojectSettings/ProjectVersion.txt
+/[Uu]ser[Ss]ettings/EditorUserSettings.asset
+[Uu]ser[Ss]ettings/EditorUserSettings.asset
 
 # file on crash reports
 sysinfo.txt
