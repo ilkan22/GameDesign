@@ -9,6 +9,7 @@ public class SceneFader : MonoBehaviour
     public Image img;
     public float FadeSpeed = 1f;
     public AnimationCurve curve;
+    public AudioClip fadeSfx;
 
     private void Start()
     {
@@ -30,6 +31,7 @@ public class SceneFader : MonoBehaviour
 
     public void FadeTo(string scene)
     {
+        AudioSource.PlayClipAtPoint(fadeSfx, Camera.main.transform.position);
         StartCoroutine(FadeOut(scene));
     }
 
@@ -51,6 +53,7 @@ public class SceneFader : MonoBehaviour
 
     public void FadeTo(int buildIndex)
     {
+        AudioSource.PlayClipAtPoint(fadeSfx, Camera.main.transform.position);
         StartCoroutine(FadeOut(buildIndex));
     }
 

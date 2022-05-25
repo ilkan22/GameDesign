@@ -32,7 +32,7 @@ public class WaveSpawner : MonoBehaviour
         }
 
         //Letzte Welle
-        if (waveIndex == waves.Length - 1)
+        if (waveIndex == waves.Length)
         {
             gameManager.WinLevel();
             this.enabled = false;

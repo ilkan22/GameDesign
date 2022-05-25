@@ -10,6 +10,7 @@ public class Bullet : MonoBehaviour
     public float speed = 60f;
     public int damage = 20;
     public float explosionRadius = 0f;
+    public AudioClip missileLauncherExplosionSfx;
 
 
     public void Seek(Transform _target)
@@ -48,7 +49,10 @@ public class Bullet : MonoBehaviour
         Destroy(effectInstance, 5f);
 
         if (explosionRadius > 0f)
+        {
+            AudioSource.PlayClipAtPoint(missileLauncherExplosionSfx, Camera.main.transform.position);
             Explode();
+        }
         else
             Damage(target);
 

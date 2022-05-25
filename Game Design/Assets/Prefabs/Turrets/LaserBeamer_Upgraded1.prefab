@@ -9862,17 +9862,21 @@ MonoBehaviour:
   range: 25
   fireRate: 1
   projectilePrefab: {fileID: 0}
-  useLaser: 1
+  useLaserTurret: 1
   damageOverTime: 40
   slowAmount: 0.4
   lineRenderer: {fileID: -2244009720660406384}
   impactEffect: {fileID: 5164126773465611723}
   impactLight: {fileID: 176719193901827576}
+  laserBeamSfx: {fileID: 8300000, guid: 5ac10dfffcfbfaf4ab8028ad06be38ac, type: 3}
+  laserOn: 0
   enemyTag: Enemy
   partToRotate: {fileID: 5152563069374692506}
   turnSpeed: 10
   firePoint: {fileID: 7316523076897743041}
   targetUpdateTime: 0.5
+  turretShootSfx: {fileID: 0}
+  missileLauncherShootSfx: {fileID: 0}
 --- !u!120 &-2244009720660406384
 LineRenderer:
   m_ObjectHideFlags: 0

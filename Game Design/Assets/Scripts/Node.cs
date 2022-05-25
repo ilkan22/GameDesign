@@ -21,6 +21,11 @@ public class Node : MonoBehaviour
 
     BuildManager buildManager;
 
+    [Header("Audio")]
+    public AudioClip buyTurretSfx;
+    public AudioClip upgradeTurretSfx;
+    public AudioClip sellTurretSfx;
+
     private void Start()
     {
         rend = GetComponent<Renderer>();
@@ -69,6 +74,8 @@ public class Node : MonoBehaviour
 
         turretBlueprint = blueprint;
 
+        AudioSource.PlayClipAtPoint(buyTurretSfx, Camera.main.transform.position);
+
         GameObject effect = (GameObject)Instantiate(buildManager.buildEffect, GetBuildPosition(), Quaternion.identity);
         Destroy(effect, 5f);
 
@@ -93,6 +100,7 @@ public class Node : MonoBehaviour
         GameObject _turret = (GameObject)Instantiate(turretBlueprint.upgradedPrefab, GetBuildPosition(), Quaternion.identity);
         turret = _turret;
 
+        AudioSource.PlayClipAtPoint(upgradeTurretSfx, Camera.main.transform.position);
         GameObject effect = (GameObject)Instantiate(buildManager.buildEffect, GetBuildPosition(), Quaternion.identity);
         Destroy(effect, 5f);
 
@@ -105,6 +113,7 @@ public class Node : MonoBehaviour
     {
         PlayerStats.Money += turretBlueprint.sellCost;
 
+        AudioSource.PlayClipAtPoint(sellTurretSfx, Camera.main.transform.position);
         GameObject effect = (GameObject)Instantiate(buildManager.sellEffect, GetBuildPosition(), Quaternion.identity);
         Destroy(effect, 5f);
 
