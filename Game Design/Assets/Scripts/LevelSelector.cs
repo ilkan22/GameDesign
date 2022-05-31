@@ -19,10 +19,10 @@ public class LevelSelector : MonoBehaviour
             {
                 levelButtons[i].interactable = false;
             }
-            /*else if(i + 1 == levelReached)
+            else if(i + 1 == levelReached)
             {
                 levelButtons[i].interactable = true;
-            }*/
+            }
         }
     }
 

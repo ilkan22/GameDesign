@@ -145,7 +145,7 @@ MonoBehaviour:
   firePoint: {fileID: 1907995196354524043}
   targetUpdateTime: 0.5
   turretShootSfx: {fileID: 8300000, guid: 90c633be01663be47ac6764d9a923501, type: 3}
-  missileLauncherShootSfx: {fileID: 0}
+  missileLauncherShootSfx: {fileID: 8300000, guid: 66152b2e8b158514f8759c0f0c9cd917, type: 3}
 --- !u!1 &6966347346111143827
 GameObject:
   m_ObjectHideFlags: 0

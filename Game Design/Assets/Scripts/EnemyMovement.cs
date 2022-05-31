@@ -10,8 +10,12 @@ public class EnemyMovement : MonoBehaviour
 
     private Enemy enemy;
 
+
+
     private void Start()
     {
+        Debug.Log("Start");
+        
         enemy = GetComponent<Enemy>();
         target = Waypoints.waypoints[0];
     }

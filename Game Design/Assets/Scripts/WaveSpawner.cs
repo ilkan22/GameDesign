@@ -11,14 +11,13 @@ public class WaveSpawner : MonoBehaviour
 
     public Wave[] waves;
 
-    public Transform spawnPoint;
-
+    [SerializeField]
     public float timeBetweenWaves = 5f;
     private float countdown = 1f;
 
     public Text waveCountdownText;
 
-    private int waveIndex = 0;
+    public int waveIndex = 0;
 
     public GameManager gameManager;
 
@@ -73,7 +72,8 @@ public class WaveSpawner : MonoBehaviour
     //Spawnt Gegner an Startposition
     void SpawnEnemy(GameObject enemy)
     {
-        Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
+        Wave wave = waves[waveIndex];
+        Instantiate(enemy, wave.spawnPoint.position, wave.spawnPoint.rotation);
     }
 
 }
