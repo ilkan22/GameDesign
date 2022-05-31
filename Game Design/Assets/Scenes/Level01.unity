@@ -1699,6 +1699,10 @@ PrefabInstance:
       propertyPath: sceneFader
       value: 
       objectReference: {fileID: 1381365535}
+    - target: {fileID: 610369471, guid: 2ffcb5999d80b254182c89d62493b4a4, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 837569863, guid: 2ffcb5999d80b254182c89d62493b4a4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
