@@ -7,6 +7,7 @@ public class PauseMenu : MonoBehaviour
 {
 
     public GameObject ui;
+    public GameObject optionsUi;
 
     public string menuSceneName = "MainMenu";
 
@@ -16,6 +17,12 @@ public class PauseMenu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
         {
             Toggle();
+            return;
+        }
+
+        if (ui.activeSelf)
+        {
+            Time.timeScale = 0f;
         }
     }
 
@@ -43,6 +50,21 @@ public class PauseMenu : MonoBehaviour
     {
         Toggle();
         sceneFader.FadeTo(menuSceneName);
+    }
+
+    public void Options()
+    {
+        optionsUi.SetActive(!optionsUi.activeSelf);
+
+        if (optionsUi.activeSelf)
+        {
+            Time.timeScale = 0f;
+            Toggle();
+        }
+        else
+        {
+            Time.timeScale = 1f;
+        }
     }
 
 }
