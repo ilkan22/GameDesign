@@ -10,6 +10,7 @@ public class PlayerAbilities : MonoBehaviour
     public float laserDamageOverTimeMultiplier = 1.5f;
     public float abilityCoolDown = 60f;
     public float abilityDuration = 5f;
+    public AudioClip playerAbilitySfx;
     public Text abilityCountdownText;
     public Text abilityDurationText;
 
@@ -43,6 +44,7 @@ public class PlayerAbilities : MonoBehaviour
         if ((Input.GetKey("g") && !countDownActive))
         {
             Debug.Log("G GEDR����CKT");
+            AudioSource.PlayClipAtPoint(playerAbilitySfx, Camera.main.transform.position);
             countDownActive = true;
             duractionActive = true;
             TowerBoost();
