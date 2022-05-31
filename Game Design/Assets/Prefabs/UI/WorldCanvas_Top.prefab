@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4045108387147110474}
   - component: {fileID: 4045108387147110473}
   - component: {fileID: 3726049829460619860}
+  - component: {fileID: 1226892894}
   m_Layer: 5
   m_Name: Lives
   m_TagString: Untagged
@@ -69,7 +70,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 68f296b7a6e2c5c43bcac81a02fde32b, type: 3}
-    m_FontSize: 200
+    m_FontSize: 150
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -97,6 +98,19 @@ MonoBehaviour:
   m_EffectDistance: {x: 5, y: -5}
   m_UseGraphicAlpha: 1
 --- !u!114 &3726049829460619860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4045108387147110471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53668e102ad881d44a6622e5dd7faaac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  livesText: {fileID: 4045108387147110474}
+--- !u!114 &1226892894
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

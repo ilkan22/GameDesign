@@ -52,17 +52,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - enemyPrefab: {fileID: 7694650679456135535, guid: 4b3cac5de934d57489924268a11968fe, type: 3}
-    enemyCount: 2
+  - enemyPrefab: {fileID: 7485648056236407013, guid: 5bb11016586267545825f5e7e69c6761, type: 3}
+    enemyCount: 3
     spawnRate: 0.5
   - enemyPrefab: {fileID: 7485648056236407013, guid: 5bb11016586267545825f5e7e69c6761, type: 3}
-    enemyCount: 5
+    enemyCount: 6
     spawnRate: 0.8
   - enemyPrefab: {fileID: 7694650679456135535, guid: 4b3cac5de934d57489924268a11968fe, type: 3}
     enemyCount: 1
     spawnRate: 2
   - enemyPrefab: {fileID: 7694650679456135535, guid: 4b3cac5de934d57489924268a11968fe, type: 3}
-    enemyCount: 3
+    enemyCount: 2
     spawnRate: 0.2
   - enemyPrefab: {fileID: 8223487342075532585, guid: c2652fd703ebbc3459eda40896f73cfe, type: 3}
     enemyCount: 1
@@ -101,8 +101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcbb9b215e365a549b6d5b170a4ddba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 700
-  startLives: 1000
+  startMoney: 300
+  startLives: 10
 --- !u!114 &646356564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,7 +150,7 @@ MonoBehaviour:
   laserDamageOverTimeMultiplier: 1.5
   abilityCoolDown: 10
   abilityDuration: 5
-  playerAbilitySfx: {fileID: 0}
+  playerAbilitySfx: {fileID: 8300000, guid: ff8990fd196535b428da84487bf4970e, type: 3}
   abilityCountdownText: {fileID: 0}
   abilityDurationText: {fileID: 0}
 --- !u!114 &8297430471772230741
