@@ -28,7 +28,7 @@ public class EnemyMovement : MonoBehaviour
     }
 
     //Nimmt den nächsten waypoint aus dem Array
-    void GetNextWayPoint()
+    public void GetNextWayPoint()
     {
         if (waypointIndex >= Waypoints.waypoints.Length - 1)    //Letzer Waypoint
         {
