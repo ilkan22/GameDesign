@@ -15,6 +15,7 @@ public class MainManu : MonoBehaviour
         sceneFader.FadeTo(levelToLoad);
     }
 
+
     public void Quit()
     {
         Debug.Log("Quit");

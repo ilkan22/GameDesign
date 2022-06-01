@@ -14,6 +14,10 @@ GameObject:
   - component: {fileID: 3587911616223480815}
   - component: {fileID: 646356564}
   - component: {fileID: 399782257}
+  - component: {fileID: 100798865}
+  - component: {fileID: 8297430471772230741}
+  - component: {fileID: 7073688363505358558}
+  - component: {fileID: 100798873}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -48,20 +52,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - enemyPrefab: {fileID: 2533712405827937437, guid: cb3f5d9757ed9c249a4ea975bab14964, type: 3}
-    enemyCount: 2
-    spawnRate: 2
-  - enemyPrefab: {fileID: 2533712405827937437, guid: cb3f5d9757ed9c249a4ea975bab14964, type: 3}
+  - enemyPrefab: {fileID: 7485648056236407013, guid: 5bb11016586267545825f5e7e69c6761, type: 3}
     enemyCount: 3
-    spawnRate: 2
-  - enemyPrefab: {fileID: 2533712405827937437, guid: b7b55d19457d8c34f91470732e4171f8, type: 3}
-    enemyCount: 2
-    spawnRate: 2
-  - enemyPrefab: {fileID: 2533712405827937437, guid: e10e02665d7bdec43ae9f42be402d8d2, type: 3}
+    spawnRate: 0.5
+  - enemyPrefab: {fileID: 7485648056236407013, guid: 5bb11016586267545825f5e7e69c6761, type: 3}
+    enemyCount: 6
+    spawnRate: 0.8
+  - enemyPrefab: {fileID: 7694650679456135535, guid: 4b3cac5de934d57489924268a11968fe, type: 3}
     enemyCount: 1
     spawnRate: 2
+  - enemyPrefab: {fileID: 7694650679456135535, guid: 4b3cac5de934d57489924268a11968fe, type: 3}
+    enemyCount: 2
+    spawnRate: 0.2
+  - enemyPrefab: {fileID: 8223487342075532585, guid: c2652fd703ebbc3459eda40896f73cfe, type: 3}
+    enemyCount: 1
+    spawnRate: 2
+  - enemyPrefab: {fileID: 8223487342075532585, guid: c2652fd703ebbc3459eda40896f73cfe, type: 3}
+    enemyCount: 3
+    spawnRate: 1
   spawnPoint: {fileID: 0}
-  timeBetweenWaves: 2
+  timeBetweenWaves: 1
   waveCountdownText: {fileID: 0}
   gameManager: {fileID: 646356564}
 --- !u!114 &3587911616223480814
@@ -91,8 +101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcbb9b215e365a549b6d5b170a4ddba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 700
-  startLives: 1000
+  startMoney: 300
+  startLives: 10
 --- !u!114 &646356564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,5 +130,73 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ui: {fileID: 0}
+  optionsUi: {fileID: 0}
+  menuSceneName: MainMenu
+  sceneFader: {fileID: 0}
+--- !u!114 &100798865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3587911616223480803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aec638373e673b143a31f374bdd29168, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRateMultiplier: 1.5
+  rangeMultiplier: 1.2
+  laserDamageOverTimeMultiplier: 1.5
+  abilityCoolDown: 10
+  abilityDuration: 5
+  playerAbilitySfx: {fileID: 8300000, guid: ff8990fd196535b428da84487bf4970e, type: 3}
+  abilityCountdownText: {fileID: 0}
+  abilityDurationText: {fileID: 0}
+--- !u!114 &8297430471772230741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3587911616223480803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10a40fb50be830f4d8e4410d1035df7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneFader: {fileID: 0}
+  nextLevel: Level02
+  levelToUnlock: 2
+  menuSceneName: MainMenu
+--- !u!114 &7073688363505358558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3587911616223480803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d267182cea47e2b498fe4df329c7c143, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roundsText: {fileID: 0}
+  sceneFader: {fileID: 0}
+  menuSceneName: MainMenu
+--- !u!114 &100798873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3587911616223480803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a279b38efad84746b07ecdbf1d91cd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ui: {fileID: 0}
+  pauseMenuUi: {fileID: 0}
   menuSceneName: MainMenu
   sceneFader: {fileID: 0}

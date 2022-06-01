@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Enemy))]
 public class EnemyMovement : MonoBehaviour
 {
+    public float rotationSpeed = 1f;
+
     private Transform target;
     private int waypointIndex = 0;
 
@@ -18,6 +20,13 @@ public class EnemyMovement : MonoBehaviour
   private void Update()
     {
         Vector3 direction = target.position - transform.position;   //Richtungsvektor für den Gegner
+
+        //Rotiert richtig
+        Quaternion lookRotation = Quaternion.LookRotation(-direction);
+        Vector3 rotation = Quaternion.Lerp(transform.rotation, lookRotation, Time.deltaTime * rotationSpeed).eulerAngles;
+        transform.rotation = Quaternion.Euler(rotation);
+
+
         transform.Translate(direction.normalized * enemy.speed * Time.deltaTime, Space.World); // Bewegt sich richtung Richtungsvektor
 
         if (Vector3.Distance(transform.position, target.position) <= 0.3f)  // Gegner erreicht den Waypoint

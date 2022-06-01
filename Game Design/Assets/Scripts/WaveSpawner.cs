@@ -22,6 +22,11 @@ public class WaveSpawner : MonoBehaviour
 
     public GameManager gameManager;
 
+    private void Start()
+    {
+        EnemiesAlive = 0;
+    }
+
     private void Update()
     {
         Debug.Log("Update");
