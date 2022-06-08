@@ -293,7 +293,7 @@ MonoBehaviour:
   moneyGain: 50
   deathEffect: {fileID: 6579891306957681894, guid: 915bafd815a38904cae99a791698e1de, type: 3}
   healthBar: {fileID: 1042777824522250196}
-  enemyDeathSfx: {fileID: 8300000, guid: 04be7968c96b44e49a6f952a5c41e439, type: 3}
+  enemyDeathSfx: {fileID: 8300000, guid: 1fc0b0133ab42d241aa81e2fbe84a748, type: 3}
 --- !u!114 &2735664395179078729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,6 +306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4787bef7f1d8a8648a9e75ba2c853685, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationSpeed: 1
 --- !u!1 &7508351131927622857
 GameObject:
   m_ObjectHideFlags: 0

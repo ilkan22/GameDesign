@@ -32,7 +32,7 @@ public class WaveSpawner : MonoBehaviour
         Debug.Log("Update");
         if (EnemiesAlive > 0)
         {
-            Debug.Log("RETUUUUUUUUUUUUUUURN");
+            //Debug.Log("RETUUUUUUUUUUUUUUURN");
             return;
         }
 
@@ -45,7 +45,7 @@ public class WaveSpawner : MonoBehaviour
 
         if (countdown <= 0f)
         {
-            Debug.Log("NEUE WELLEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE!!!");
+            //Debug.Log("NEUE WELLEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE!!!");
             StartCoroutine(SpawnWave());    // Coroutine ermöglicht die funktion gleichzeitig laufen zu lassen
             countdown = timeBetweenWaves;
             return;

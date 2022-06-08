@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 15
-  fireRate: 1.5
+  fireRate: 1.2
   projectilePrefab: {fileID: 1732055791230596801, guid: 3a808fad3bfe3404c9dbea0d00bc4134, type: 3}
   useLaserTurret: 0
   damageOverTime: 30
@@ -144,8 +144,8 @@ MonoBehaviour:
   turnSpeed: 10
   firePoint: {fileID: 1907995196354524043}
   targetUpdateTime: 0.5
-  turretShootSfx: {fileID: 8300000, guid: 90c633be01663be47ac6764d9a923501, type: 3}
-  missileLauncherShootSfx: {fileID: 8300000, guid: 90c633be01663be47ac6764d9a923501, type: 3}
+  turretShootSfx: {fileID: 8300000, guid: 6f2aa71754c24304c9e3be2a52bb98b4, type: 3}
+  missileLauncherShootSfx: {fileID: 8300000, guid: 6f2aa71754c24304c9e3be2a52bb98b4, type: 3}
 --- !u!1 &6966347346111143827
 GameObject:
   m_ObjectHideFlags: 0

@@ -1058,6 +1058,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7872588655880690679, guid: b7f836bf6cb95ea428483bad579397ea, type: 3}
+      propertyPath: m_ClearFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7f836bf6cb95ea428483bad579397ea, type: 3}
 --- !u!1 &1772767554
@@ -1278,6 +1282,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5584365963717612053, guid: e6ce9f73a91c5a841a6115b463f67c0f, type: 3}
+      propertyPath: fadeSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 84316c050a4813d47bf5880588c31274, type: 3}
     - target: {fileID: 5584365963717612054, guid: e6ce9f73a91c5a841a6115b463f67c0f, type: 3}
       propertyPath: m_RootOrder
       value: 0

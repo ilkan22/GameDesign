@@ -365,11 +365,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startSpeed: 6
   speed: 0
-  startHealth: 200
-  moneyGain: 100
+  startHealth: 300
+  moneyGain: 75
   deathEffect: {fileID: 6579891306957681894, guid: 877873bb52dc95d4fa7bd311f36dc62f, type: 3}
   healthBar: {fileID: 6550578049124741037}
-  enemyDeathSfx: {fileID: 8300000, guid: 04be7968c96b44e49a6f952a5c41e439, type: 3}
+  enemyDeathSfx: {fileID: 8300000, guid: 1fc0b0133ab42d241aa81e2fbe84a748, type: 3}
 --- !u!114 &313764211157526554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -382,6 +382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4787bef7f1d8a8648a9e75ba2c853685, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationSpeed: 1
 --- !u!1001 &3833815215773980662
 PrefabInstance:
   m_ObjectHideFlags: 0

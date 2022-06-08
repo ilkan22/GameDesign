@@ -366,10 +366,10 @@ MonoBehaviour:
   startSpeed: 15
   speed: 0
   startHealth: 75
-  moneyGain: 50
+  moneyGain: 25
   deathEffect: {fileID: 6579891306957681894, guid: 102625c6facc90345b02e79fcf8d3ca3, type: 3}
   healthBar: {fileID: 2664282290715223787}
-  enemyDeathSfx: {fileID: 8300000, guid: 04be7968c96b44e49a6f952a5c41e439, type: 3}
+  enemyDeathSfx: {fileID: 8300000, guid: 1fc0b0133ab42d241aa81e2fbe84a748, type: 3}
 --- !u!114 &3136323244527219583
 MonoBehaviour:
   m_ObjectHideFlags: 0
