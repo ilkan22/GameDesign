@@ -95,6 +95,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   impactEffect: {fileID: 678587569712551257, guid: 70f4475f393549f4fab7c39911592c72, type: 3}
+<<<<<<< Updated upstream
   speed: 60
   damage: 30
+=======
+  speed: 80
+  damage: 5
+>>>>>>> Stashed changes
   explosionRadius: 0

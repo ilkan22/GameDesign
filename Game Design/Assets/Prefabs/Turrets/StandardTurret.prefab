@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 10
-  fireRate: 1
+  fireRate: 5
   projectilePrefab: {fileID: 1732055791230596801, guid: 9c7062f434861204ca9cda359bddcee6, type: 3}
   useLaser: 0
   damageOverTime: 30
