@@ -28,6 +28,7 @@ Transform:
   m_LocalRotation: {x: 0.00000014901161, y: 0.000000059604645, z: -0.7071068, w: -0.7071068}
   m_LocalPosition: {x: 0, y: 0.7293928, z: 1.8393252}
   m_LocalScale: {x: 0.04413966, y: 0.044139653, z: 0.04413966}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5246249955284091348}
   m_RootOrder: 0
@@ -51,6 +52,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -110,6 +112,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5246249955284091348}
   - {fileID: 2610035035470810962}
@@ -129,7 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 15
-  fireRate: 1.5
+  fireRate: 6
   projectilePrefab: {fileID: 1732055791230596801, guid: 3a808fad3bfe3404c9dbea0d00bc4134, type: 3}
   useLaserTurret: 0
   damageOverTime: 30
@@ -145,7 +148,7 @@ MonoBehaviour:
   firePoint: {fileID: 1907995196354524043}
   targetUpdateTime: 0.5
   turretShootSfx: {fileID: 8300000, guid: 90c633be01663be47ac6764d9a923501, type: 3}
-  missileLauncherShootSfx: {fileID: 8300000, guid: 90c633be01663be47ac6764d9a923501, type: 3}
+  missileLauncherShootSfx: {fileID: 8300000, guid: 66152b2e8b158514f8759c0f0c9cd917, type: 3}
 --- !u!1 &6966347346111143827
 GameObject:
   m_ObjectHideFlags: 0
@@ -174,6 +177,7 @@ Transform:
   m_LocalRotation: {x: 0.5000001, y: 0.50000006, z: -0.4999999, w: -0.49999994}
   m_LocalPosition: {x: -1.8393269, y: 1.4293928, z: 0.00000019205154}
   m_LocalScale: {x: 0.044139665, y: 0.044139665, z: 0.044139665}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2176481337075475853}
   m_RootOrder: 1
@@ -197,6 +201,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -254,6 +259,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0.6, z: 2.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5246249955284091348}
   m_RootOrder: 1
@@ -284,6 +290,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8615228040822451481}
   - {fileID: 1907995196354524043}
