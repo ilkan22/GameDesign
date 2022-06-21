@@ -110,7 +110,7 @@ Transform:
   m_GameObject: {fileID: 1840590437512583979}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.8, y: 1.8, z: 1.8}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 984829706985255142}
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aa2f7d086d83ee43bd6dac68fee8be9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 20
+  range: 24
   fireRate: 1.25
   projectilePrefab: {fileID: 5114437504195955056, guid: 0908e379c06af3644b9bc1959a6b4a1c, type: 3}
   useLaserTurret: 0

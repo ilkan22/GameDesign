@@ -109,7 +109,7 @@ Transform:
   m_GameObject: {fileID: 5114437504195955056}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3775953674649689906}
@@ -132,4 +132,4 @@ MonoBehaviour:
   speed: 30
   damage: 10
   explosionRadius: 8
-  missileLauncherExplosionSfx: {fileID: 8300000, guid: 4a89120906740c44eb8413e13978111c, type: 3}
+  missileLauncherExplosionSfx: {fileID: 8300000, guid: fc3f3ae2f3c141f4a9690e22c0a129a0, type: 3}

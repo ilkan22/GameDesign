@@ -28,6 +28,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1936694640255655884}
   m_Father: {fileID: 5806042680781008187}
@@ -105,6 +106,7 @@ RectTransform:
   m_LocalRotation: {x: 0.3420201, y: -0, z: -0, w: 0.9396927}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.015, y: 0.015000001, z: 0.015000001}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 215425965137712021}
   m_Father: {fileID: 7098015446731502678}
@@ -206,7 +208,8 @@ Transform:
   m_GameObject: {fileID: 7485648056236407013}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3019371849071795030}
   - {fileID: 5806042680781008187}
@@ -232,6 +235,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -293,7 +297,7 @@ MonoBehaviour:
   moneyGain: 50
   deathEffect: {fileID: 6579891306957681894, guid: 915bafd815a38904cae99a791698e1de, type: 3}
   healthBar: {fileID: 1042777824522250196}
-  enemyDeathSfx: {fileID: 8300000, guid: 04be7968c96b44e49a6f952a5c41e439, type: 3}
+  enemyDeathSfx: {fileID: 8300000, guid: 1fc0b0133ab42d241aa81e2fbe84a748, type: 3}
 --- !u!114 &2735664395179078729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,6 +310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4787bef7f1d8a8648a9e75ba2c853685, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationSpeed: 1
 --- !u!1 &7508351131927622857
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,6 +339,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 215425965137712021}
   m_RootOrder: 0

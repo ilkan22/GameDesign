@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
@@ -50,6 +51,7 @@ public class Enemy : MonoBehaviour
         PlayerStats.Money += moneyGain;
         GameObject effect = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
         AudioSource.PlayClipAtPoint(enemyDeathSfx, Camera.main.transform.position);
+        
 
         Destroy(effect, 5f);
 
