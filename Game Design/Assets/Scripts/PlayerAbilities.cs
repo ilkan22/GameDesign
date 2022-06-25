@@ -13,6 +13,7 @@ public class PlayerAbilities : MonoBehaviour
     public AudioClip playerAbilitySfx;
     public Text abilityCountdownText;
     public Text abilityDurationText;
+    public Image abilityIMG;
 
 
     private float damageOverTimeOld;
@@ -62,8 +63,13 @@ public class PlayerAbilities : MonoBehaviour
 
         if (countdown <= 0f)
         {
+            abilityIMG.color = Color.white;
             countDownActive = false;
             return;
+        }
+        if(countdown > 0f)
+        {
+            abilityIMG.color = Color.black;
         }
 
         duration -= Time.deltaTime;        // z�hlt 1 Sekunde runter
@@ -71,7 +77,7 @@ public class PlayerAbilities : MonoBehaviour
         countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);  //Countdown soll nicht negativ werden
         duration = Mathf.Clamp(duration, 0f, Mathf.Infinity);  //Countdown soll nicht negativ werden
         abilityCountdownText.text = string.Format("AbilityCoolDown " + "{0:00.00}", countdown);
-        abilityDurationText.text = string.Format("AbilityDuration " + "{0:00.00}", duration);
+        abilityDurationText.text = string.Format("{0:00.00}", duration);
     }
 
     void TowerBoost()
