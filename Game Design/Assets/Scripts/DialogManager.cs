@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class DialogManager : MonoBehaviour
 {
     public Text dialogText;
+    public Image dialogSprite;
     public Animator animator;
 
     private Queue<string> sentences;
@@ -13,15 +14,16 @@ public class DialogManager : MonoBehaviour
     void Start()
     {
         sentences = new Queue<string>();
+        
     }
-    public void StartDialog(Dialog dialog)
+    public void StartDialog(Dialog dialog, Sprite sprite)
     {
         
         animator.SetBool("IsOpen", true);
         Debug.Log("Dialog getstartet");
         sentences.Clear();
-
-        foreach(string sentence in dialog.sentences)
+        dialogSprite.GetComponent<Image>().sprite = sprite;
+        foreach (string sentence in dialog.sentences)
         {
             
             sentences.Enqueue(sentence);
