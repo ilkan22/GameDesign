@@ -28,7 +28,7 @@ public class Turret : MonoBehaviour
     public Transform partToRotate;
     public float turnSpeed = 10f;
     public Transform firePoint;
-    public float targetUpdateTime = 0.5f;
+    public float targetUpdateTime = 0.1f;
     public AudioClip turretShootSfx;
     public AudioClip missileLauncherShootSfx;
 
@@ -50,7 +50,14 @@ public class Turret : MonoBehaviour
 
         foreach (GameObject enemy in enemies)
         {
+      
             targetEnemy = enemy.GetComponent<Enemy>();
+            if (targetEnemy.health != 0 && target != null)
+            {
+                Debug.Log("STOOTOTOTP");
+                return;
+            }
+
             float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
             
             if(distanceToEnemy < shortestDistanceToEnemy)
