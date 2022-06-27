@@ -14,11 +14,13 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        startButton.gameObject.SetActive(false);
         Invoke("timeStop",1f);
     }
 
     private void timeStop()
     {
+        startButton.gameObject.SetActive(true);
         Time.timeScale = 0f;
     }
 
