@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour
 {
     public Text roundsText;
-
     public SceneFader sceneFader;
+
 
     public string menuSceneName = "MainMenu";
 
@@ -19,12 +19,13 @@ public class GameOver : MonoBehaviour
 
     public void Retry()
     {
+        Time.timeScale = 1f;
         sceneFader.FadeTo(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void Menu()
     {
-
+        Time.timeScale = 1f;
         sceneFader.FadeTo(menuSceneName);
     }
 

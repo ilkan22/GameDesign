@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour
     public float speed;
 
     public float startHealth = 100;
-    private float health;
+    public float health;
 
     public int moneyGain = 50;
     public GameObject deathEffect;

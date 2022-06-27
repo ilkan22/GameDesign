@@ -26,22 +26,27 @@ public class GameManager : MonoBehaviour
             EndGame();
         }
 
-        if(PlayerStats.Lives <= 0)
+        if (Input.GetKeyDown("r"))
+        {
+            WinLevel();
+        }
+
+        if (PlayerStats.Lives <= 0)
             EndGame();
     }
 
     private void EndGame()
     {
         gameEnded = true;
-
         gameOverUI.SetActive(true);
-        
-        
+        Time.timeScale = 0f;
     }
 
     public void WinLevel()
     {
+        
         gameEnded = true;
         completeLevelUI.SetActive(true);
+        Time.timeScale = 0f;
     }
 }

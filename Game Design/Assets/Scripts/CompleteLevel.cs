@@ -13,6 +13,7 @@ public class CompleteLevel : MonoBehaviour
 
     public void Continue()
     {
+        Time.timeScale = 1f;
         WaveSpawner.EnemiesAlive = 0;
         PlayerPrefs.SetInt("levelReached", levelToUnlock);
         sceneFader.FadeTo(nextLevel);
@@ -20,6 +21,7 @@ public class CompleteLevel : MonoBehaviour
 
     public void Menu()
     {
+        Time.timeScale = 1f;
         sceneFader.FadeTo(menuSceneName);
     }
 

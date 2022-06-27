@@ -50,7 +50,9 @@ public class Turret : MonoBehaviour
 
         foreach (GameObject enemy in enemies)
         {
+            targetEnemy = enemy.GetComponent<Enemy>();
             float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
+            
             if(distanceToEnemy < shortestDistanceToEnemy)
             {
                 shortestDistanceToEnemy = distanceToEnemy;
@@ -167,9 +169,11 @@ public class Turret : MonoBehaviour
             bullet.Seek(target);
     }
 
-    void OnDrawGizmosSelected()
+
+    void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
     }
+    
 }
