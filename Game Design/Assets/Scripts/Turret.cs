@@ -52,18 +52,34 @@ public class Turret : MonoBehaviour
         {
       
             targetEnemy = enemy.GetComponent<Enemy>();
-            if (targetEnemy.health != 0 && target != null)
+            
+            float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
+
+            if (!laserOn)
             {
-                Debug.Log("STOOTOTOTP");
-                return;
+                if (targetEnemy.health != 0 && target != null)
+                {
+                    if (distanceToEnemy >= range)
+                    {
+                        continue;
+                    }
+                    return;
+                }
+            }
+            else
+            {
+                //KA
             }
 
-            float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
-            
-            if(distanceToEnemy < shortestDistanceToEnemy)
+
+
+            if (distanceToEnemy < shortestDistanceToEnemy)
             {
+
                 shortestDistanceToEnemy = distanceToEnemy;
+
                 nearestEnemy = enemy;
+               
             }
         }
 
@@ -82,6 +98,7 @@ public class Turret : MonoBehaviour
         if (target == null)
         {
             if (useLaserTurret)
+            {
                 if (lineRenderer.enabled)
                 {
                     laserOn = false;
@@ -90,10 +107,10 @@ public class Turret : MonoBehaviour
                     impactEffect.Stop();
                     impactLight.enabled = false;
                 }
-            return;
+                return;
+            }
         }
             
-
         LockOnTarget();
 
         if (useLaserTurret)
@@ -130,7 +147,6 @@ public class Turret : MonoBehaviour
         //Laser und Licht An
         if (!lineRenderer.enabled)
         {
-
             LaserAudio(_laserOn);
 
             lineRenderer.enabled = true;
@@ -142,6 +158,7 @@ public class Turret : MonoBehaviour
         // Laser Position
         lineRenderer.SetPosition(0, firePoint.position);
         lineRenderer.SetPosition(1, target.position);
+
 
         //Impact Effekt Position
         Vector3 dir = firePoint.position - target.position;
