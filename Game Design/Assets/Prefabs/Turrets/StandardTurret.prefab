@@ -28,6 +28,7 @@ Transform:
   m_LocalRotation: {x: 0.00000014901161, y: 0.000000059604645, z: -0.7071068, w: -0.7071068}
   m_LocalPosition: {x: 0, y: 0.7293928, z: 1.8393252}
   m_LocalScale: {x: 0.04413966, y: 0.044139653, z: 0.04413966}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5246249955284091348}
   m_RootOrder: 0
@@ -51,6 +52,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -95,7 +97,7 @@ GameObject:
   - component: {fileID: 5747135309866792975}
   m_Layer: 0
   m_Name: StandardTurret
-  m_TagString: Untagged
+  m_TagString: StandardTurret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,7 +111,8 @@ Transform:
   m_GameObject: {fileID: 1549161933168901943}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5246249955284091348}
   - {fileID: 2610035035470810962}
@@ -128,14 +131,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aa2f7d086d83ee43bd6dac68fee8be9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 10
-  fireRate: 1
-  turnSpeed: 10
-  targetUpdateTime: 0.5
+  range: 15
+  fireRate: 5
+  projectilePrefab: {fileID: 1732055791230596801, guid: 9c7062f434861204ca9cda359bddcee6, type: 3}
+  useLaserTurret: 0
+  damageOverTime: 30
+  slowAmount: 0.5
+  lineRenderer: {fileID: 0}
+  impactEffect: {fileID: 0}
+  impactLight: {fileID: 0}
+  laserBeamSfx: {fileID: 0}
+  laserOn: 0
   enemyTag: Enemy
   partToRotate: {fileID: 5246249955284091348}
-  projectilePrefab: {fileID: 1732055791230596801, guid: 9c7062f434861204ca9cda359bddcee6, type: 3}
+  turnSpeed: 10
   firePoint: {fileID: 1907995196354524043}
+  targetUpdateTime: 0.5
+  turretShootSfx: {fileID: 8300000, guid: 90c633be01663be47ac6764d9a923501, type: 3}
+  missileLauncherShootSfx: {fileID: 0}
 --- !u!1 &6966347346111143827
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,6 +177,7 @@ Transform:
   m_LocalRotation: {x: 0.5000001, y: 0.50000006, z: -0.4999999, w: -0.49999994}
   m_LocalPosition: {x: -1.8393269, y: 1.4293928, z: 0.00000019205154}
   m_LocalScale: {x: 0.044139665, y: 0.044139665, z: 0.044139665}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2176481337075475853}
   m_RootOrder: 1
@@ -187,6 +201,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -244,6 +259,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0.6, z: 2.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5246249955284091348}
   m_RootOrder: 1
@@ -274,6 +290,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8615228040822451481}
   - {fileID: 1907995196354524043}

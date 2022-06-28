@@ -14,12 +14,14 @@ public class Turret : MonoBehaviour
     public GameObject projectilePrefab;
 
     [Header("Laser")]
-    public bool useLaser = false;
-    public int damageOverTime = 30;
+    public bool useLaserTurret = false;
+    public float damageOverTime = 30f;
     public float slowAmount = 0.5f;
     public LineRenderer lineRenderer;
     public ParticleSystem impactEffect;
     public Light impactLight;
+    public AudioClip laserBeamSfx;
+    public bool laserOn = false;
 
     [Header("SetUp")]
     public string enemyTag = "Enemy";
@@ -27,7 +29,8 @@ public class Turret : MonoBehaviour
     public float turnSpeed = 10f;
     public Transform firePoint;
     public float targetUpdateTime = 0.5f;
-
+    public AudioClip turretShootSfx;
+    public AudioClip missileLauncherShootSfx;
 
 
 
@@ -69,9 +72,11 @@ public class Turret : MonoBehaviour
     {
         if (target == null)
         {
-            if (useLaser)
+            if (useLaserTurret)
                 if (lineRenderer.enabled)
                 {
+                    laserOn = false;
+                    LaserAudio(laserOn);
                     lineRenderer.enabled = false;
                     impactEffect.Stop();
                     impactLight.enabled = false;
@@ -82,8 +87,11 @@ public class Turret : MonoBehaviour
 
         LockOnTarget();
 
-        if (useLaser)
-            Laser();
+        if (useLaserTurret)
+        {
+            laserOn = true;
+            Laser(laserOn);
+        }
         else
         {
             if (fireCountdown <= 0f)
@@ -104,19 +112,24 @@ public class Turret : MonoBehaviour
         partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
     }
 
-    void Laser()
+    void Laser(bool _laserOn)
     {
+
         targetEnemy.TakeDamage(damageOverTime * Time.deltaTime);
         targetEnemy.Slow(slowAmount);
 
-        //Laser und Licht An/Aus
+        //Laser und Licht An
         if (!lineRenderer.enabled)
         {
+
+            LaserAudio(_laserOn);
+
             lineRenderer.enabled = true;
             impactEffect.Play();
             impactLight.enabled = true;
         }
-  
+
+
         // Laser Position
         lineRenderer.SetPosition(0, firePoint.position);
         lineRenderer.SetPosition(1, target.position);
@@ -127,9 +140,28 @@ public class Turret : MonoBehaviour
         impactEffect.transform.rotation = Quaternion.LookRotation(dir);
     }
 
+    void LaserAudio(bool _laserOn)
+    {
+        AudioSource laserAudio = GetComponent<AudioSource>();
+        laserAudio.clip = laserBeamSfx;
+        if (laserOn)
+        {
+            laserAudio.loop = _laserOn;
+            laserAudio.Play();
+        }
+        else
+            laserAudio.Stop();
+    }
+
     void Shoot()
     {
         GameObject bulletGO = (GameObject)Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
+
+        if (this.CompareTag("StandardTurret"))
+            AudioSource.PlayClipAtPoint(turretShootSfx, Camera.main.transform.position);
+        else
+            AudioSource.PlayClipAtPoint(missileLauncherShootSfx, Camera.main.transform.position);
+
         Bullet bullet = bulletGO.GetComponent<Bullet>();
         if (bullet != null)
             bullet.Seek(target);
