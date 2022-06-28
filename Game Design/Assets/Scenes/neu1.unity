@@ -406,7 +406,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &86034825
 Transform:
   m_ObjectHideFlags: 0
@@ -535,7 +535,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4715624504420369808, guid: 3df91d1a30ca86742828790a0fd34008, type: 3}
       propertyPath: dialog.sentences.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4715624504420369808, guid: 3df91d1a30ca86742828790a0fd34008, type: 3}
       propertyPath: dialog.sentences.Array.data[0]
@@ -544,12 +544,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4715624504420369808, guid: 3df91d1a30ca86742828790a0fd34008, type: 3}
       propertyPath: dialog.sentences.Array.data[1]
-      value: Now good luck :)
+      value: You can move throgh the map with WASD
       objectReference: {fileID: 0}
     - target: {fileID: 4715624504420369808, guid: 3df91d1a30ca86742828790a0fd34008, type: 3}
       propertyPath: dialog.sentences.Array.data[2]
-      value: You can place the turrets by clicking on their icons and clicking on
-        their place. By clicking on your turret you can upgrade or sell them.
+      value: Now good luck :)
       objectReference: {fileID: 0}
     - target: {fileID: 6792837515012642699, guid: 3df91d1a30ca86742828790a0fd34008, type: 3}
       propertyPath: m_RootOrder
@@ -694,13 +693,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4715624504420369808, guid: 3df91d1a30ca86742828790a0fd34008, type: 3}
       propertyPath: dialog.sentences.Array.data[0]
-      value: This is a simple Asteroid. It is just levitating in the orbit. After
-        destroying it you earn 100 Space Dollars.
+      value: This is a SIMPLE ASTROID. After destroying it you gain 50 Space Dollar.
       objectReference: {fileID: 0}
     - target: {fileID: 4715624504420369808, guid: 3df91d1a30ca86742828790a0fd34008, type: 3}
       propertyPath: dialog.sentences.Array.data[1]
-      value: This is a simple Asteroid. It is just levitating in the orbit. After
-        destroying it you earn 100 Space Dollars.
+      value: This is a SIMPLE ASTROID. After destroying it you gain 50 Space Dollar.
       objectReference: {fileID: 0}
     - target: {fileID: 6792837515012642699, guid: 3df91d1a30ca86742828790a0fd34008, type: 3}
       propertyPath: m_RootOrder
@@ -773,11 +770,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4715624504420369808, guid: 3df91d1a30ca86742828790a0fd34008, type: 3}
       propertyPath: dialog.sentences.Array.data[0]
-      value: This is a laser beamer. It slow the astroids and makes damage over time
+      value: This is a laser beamer. It slow the astroids and makes damage over time.
       objectReference: {fileID: 0}
     - target: {fileID: 4715624504420369808, guid: 3df91d1a30ca86742828790a0fd34008, type: 3}
       propertyPath: dialog.sentences.Array.data[1]
-      value: 
+      value: This is a laser beamer. It slow the astroids and makes damage over time.
       objectReference: {fileID: 0}
     - target: {fileID: 6792837515012642699, guid: 3df91d1a30ca86742828790a0fd34008, type: 3}
       propertyPath: m_RootOrder
@@ -993,11 +990,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4715624504420369808, guid: 3df91d1a30ca86742828790a0fd34008, type: 3}
       propertyPath: dialog.sentences.Array.data[0]
-      value: This is a missile launcher. It makes area damage
+      value: This is a missile launcher. It makes area damage.
       objectReference: {fileID: 0}
     - target: {fileID: 4715624504420369808, guid: 3df91d1a30ca86742828790a0fd34008, type: 3}
       propertyPath: dialog.sentences.Array.data[1]
-      value: This is a missile launcher. It makes area damage
+      value: This is a missile launcher. It makes area damage.
       objectReference: {fileID: 0}
     - target: {fileID: 6792837515012642699, guid: 3df91d1a30ca86742828790a0fd34008, type: 3}
       propertyPath: m_RootOrder
@@ -1293,7 +1290,7 @@ MonoBehaviour:
   spawnWait: 0
   spawnMostWait: 65
   spawnLeastWait: 35
-  startWait: 7
+  startWait: 40
   stop: 0
 --- !u!4 &437410046
 Transform:
@@ -1484,13 +1481,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4715624504420369808, guid: 3df91d1a30ca86742828790a0fd34008, type: 3}
       propertyPath: dialog.sentences.Array.data[0]
-      value: This is a COMET. It flies faster then a simple Astroid but also gives
-        less Space Dollars (75$).
+      value: This is a COMET. It flys faster then a other astroids. You gain 25 Space
+        Dollar when you destroy it.
       objectReference: {fileID: 0}
     - target: {fileID: 4715624504420369808, guid: 3df91d1a30ca86742828790a0fd34008, type: 3}
       propertyPath: dialog.sentences.Array.data[1]
-      value: This is a COMET. It flies faster then a simple Astroid but also gives
-        less Space Dollars (75$).
+      value: This is a COMET. It flys faster then a other astroids. You gain 25 Space
+        Dollar when you destroy it.
       objectReference: {fileID: 0}
     - target: {fileID: 6792837515012642699, guid: 3df91d1a30ca86742828790a0fd34008, type: 3}
       propertyPath: m_RootOrder
@@ -1685,11 +1682,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4715624504420369808, guid: 3df91d1a30ca86742828790a0fd34008, type: 3}
       propertyPath: dialog.sentences.Array.data[0]
-      value: In the upper right corner you see your life indicator.
+      value: Below left there is your life indicator.
       objectReference: {fileID: 0}
     - target: {fileID: 4715624504420369808, guid: 3df91d1a30ca86742828790a0fd34008, type: 3}
       propertyPath: dialog.sentences.Array.data[1]
-      value: 
+      value: Below left there is your life indicator.
       objectReference: {fileID: 0}
     - target: {fileID: 6792837515012642699, guid: 3df91d1a30ca86742828790a0fd34008, type: 3}
       propertyPath: m_RootOrder
@@ -2100,12 +2097,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4715624504420369808, guid: 3df91d1a30ca86742828790a0fd34008, type: 3}
       propertyPath: dialog.sentences.Array.data[0]
-      value: Below left you can see your current Space Dollars. You can spend them
+      value: Down in the you can see your current Space Dollars. You can spend them
         by buying turrets at the shop or upgrade your turrets.
       objectReference: {fileID: 0}
     - target: {fileID: 4715624504420369808, guid: 3df91d1a30ca86742828790a0fd34008, type: 3}
       propertyPath: dialog.sentences.Array.data[1]
-      value: 
+      value: Down in the you can see your current Space Dollars. You can spend them
+        by buying turrets at the shop or upgrade your turrets.
       objectReference: {fileID: 0}
     - target: {fileID: 6792837515012642699, guid: 3df91d1a30ca86742828790a0fd34008, type: 3}
       propertyPath: m_RootOrder
@@ -2760,12 +2758,12 @@ PrefabInstance:
     - target: {fileID: 4715624504420369808, guid: 3df91d1a30ca86742828790a0fd34008, type: 3}
       propertyPath: dialog.sentences.Array.data[0]
       value: This is a BIG ASTROID. It has more lives then the others but also flies
-        slower. You earn also 100 Space Dollars for destroying it.
+        slower. You earn also 75 Space Dollars for destroying it.
       objectReference: {fileID: 0}
     - target: {fileID: 4715624504420369808, guid: 3df91d1a30ca86742828790a0fd34008, type: 3}
       propertyPath: dialog.sentences.Array.data[1]
       value: This is a BIG ASTROID. It has more lives then the others but also flies
-        slower. You earn also 100 Space Dollars for destroying it.
+        slower. You earn also 75 Space Dollars for destroying it.
       objectReference: {fileID: 0}
     - target: {fileID: 6792837515012642699, guid: 3df91d1a30ca86742828790a0fd34008, type: 3}
       propertyPath: m_RootOrder
@@ -2909,11 +2907,12 @@ PrefabInstance:
     - target: {fileID: 4715624504420369808, guid: 3df91d1a30ca86742828790a0fd34008, type: 3}
       propertyPath: dialog.sentences.Array.data[0]
       value: This is your player ability. By activating it you gain a tower bosst
-        for 5 seconds. You can activate your ability by clicking G.
+        for 5 seconds. You can activate your ability when you press G.
       objectReference: {fileID: 0}
     - target: {fileID: 4715624504420369808, guid: 3df91d1a30ca86742828790a0fd34008, type: 3}
       propertyPath: dialog.sentences.Array.data[1]
-      value: 
+      value: This is your player ability. By activating it you gain a tower bosst
+        for 5 seconds. You can activate your ability when you press G.
       objectReference: {fileID: 0}
     - target: {fileID: 6792837515012642699, guid: 3df91d1a30ca86742828790a0fd34008, type: 3}
       propertyPath: m_RootOrder
@@ -3117,7 +3116,7 @@ MonoBehaviour:
   spawnWait: 0
   spawnMostWait: 30
   spawnLeastWait: 10
-  startWait: 3
+  startWait: 25
   stop: 0
 --- !u!4 &1500825575
 Transform:
@@ -3248,8 +3247,8 @@ MonoBehaviour:
   spawnValue: {x: 10, y: 0, z: 2}
   spawnWait: 0
   spawnMostWait: 100
-  spawnLeastWait: 4
-  startWait: 7
+  spawnLeastWait: 10
+  startWait: 2
   stop: 0
 --- !u!4 &1738150687
 Transform:
@@ -3259,7 +3258,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1738150685}
   m_LocalRotation: {x: 0, y: 0.5, z: 0, w: 0.8660254}
-  m_LocalPosition: {x: -364, y: -275, z: 201}
+  m_LocalPosition: {x: -424, y: -275, z: 194}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4097,7 +4096,7 @@ MonoBehaviour:
   spawnWait: 0
   spawnMostWait: 60
   spawnLeastWait: 25
-  startWait: 9
+  startWait: 10
   stop: 0
 --- !u!4 &2024814972
 Transform:
@@ -4400,7 +4399,7 @@ MonoBehaviour:
   spawnWait: 0
   spawnMostWait: 90
   spawnLeastWait: 5
-  startWait: 10
+  startWait: 32
   stop: 0
 --- !u!4 &2073879903
 Transform:
