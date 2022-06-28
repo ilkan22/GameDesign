@@ -1257,6 +1257,59 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9d53c210f4046f439a595a9c001d2c5, type: 3}
+--- !u!1 &437410044
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 437410046}
+  - component: {fileID: 437410045}
+  m_Layer: 0
+  m_Name: ShootingStarSpawner (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &437410045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437410044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d42ad588c740f774d955ddd154870926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootingStar:
+  - {fileID: 1449804283}
+  - {fileID: 1354020585}
+  spawnValue: {x: 10, y: 0, z: 2}
+  spawnWait: 0
+  spawnMostWait: 65
+  spawnLeastWait: 35
+  startWait: 7
+  stop: 0
+--- !u!4 &437410046
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437410044}
+  m_LocalRotation: {x: 0, y: 0.9063079, z: -0, w: -0.42261827}
+  m_LocalPosition: {x: 407, y: -231, z: 238}
+  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 230, z: 0}
 --- !u!1001 &486478560
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1846,7 +1899,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5663063914987752259, guid: e6be0c62d08c26f4086d31094db7805e, type: 3}
       propertyPath: m_Name
-      value: shootingstar
+      value: shootingstar1_white
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6be0c62d08c26f4086d31094db7805e, type: 3}
@@ -2501,7 +2554,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1214441156
 Transform:
   m_ObjectHideFlags: 0
@@ -2764,6 +2817,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3df91d1a30ca86742828790a0fd34008, type: 3}
+--- !u!1 &1354020585 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5663063914987752259, guid: e6be0c62d08c26f4086d31094db7805e, type: 3}
+  m_PrefabInstance: {fileID: 847552751}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1361777989
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2978,12 +3036,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5539478060274344258, guid: e6be0c62d08c26f4086d31094db7805e, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.9655311
+      objectReference: {fileID: 0}
+    - target: {fileID: 5539478060274344258, guid: e6be0c62d08c26f4086d31094db7805e, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5539478060274344258, guid: e6be0c62d08c26f4086d31094db7805e, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.7028302
+      objectReference: {fileID: 0}
     - target: {fileID: 5663063914987752259, guid: e6be0c62d08c26f4086d31094db7805e, type: 3}
       propertyPath: m_Name
       value: shootingstar2
       objectReference: {fileID: 0}
+    - target: {fileID: 8753827599668268058, guid: e6be0c62d08c26f4086d31094db7805e, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753827599668268058, guid: e6be0c62d08c26f4086d31094db7805e, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753827599668268058, guid: e6be0c62d08c26f4086d31094db7805e, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6be0c62d08c26f4086d31094db7805e, type: 3}
+--- !u!1 &1449804283 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5663063914987752259, guid: e6be0c62d08c26f4086d31094db7805e, type: 3}
+  m_PrefabInstance: {fileID: 1783503376}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1480791010 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7492809963719772361, guid: a9d53c210f4046f439a595a9c001d2c5, type: 3}
@@ -2994,6 +3081,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6792837515012642699, guid: 3df91d1a30ca86742828790a0fd34008, type: 3}
   m_PrefabInstance: {fileID: 1314731167}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1500825573
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1500825575}
+  - component: {fileID: 1500825574}
+  m_Layer: 0
+  m_Name: ShootingStarSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1500825574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500825573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d42ad588c740f774d955ddd154870926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootingStar:
+  - {fileID: 1449804283}
+  - {fileID: 1354020585}
+  spawnValue: {x: 10, y: 0, z: 2}
+  spawnWait: 0
+  spawnMostWait: 30
+  spawnLeastWait: 10
+  startWait: 3
+  stop: 0
+--- !u!4 &1500825575
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500825573}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -245, y: -187, z: -129}
+  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1536511105 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6792837515012642699, guid: 3df91d1a30ca86742828790a0fd34008, type: 3}
@@ -3074,6 +3214,58 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6792837515012642699, guid: 3df91d1a30ca86742828790a0fd34008, type: 3}
   m_PrefabInstance: {fileID: 838129952}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1738150685
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1738150687}
+  - component: {fileID: 1738150686}
+  m_Layer: 0
+  m_Name: ShootingStarSpawner (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1738150686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738150685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d42ad588c740f774d955ddd154870926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootingStar:
+  - {fileID: 1449804283}
+  spawnValue: {x: 10, y: 0, z: 2}
+  spawnWait: 0
+  spawnMostWait: 100
+  spawnLeastWait: 4
+  startWait: 7
+  stop: 0
+--- !u!4 &1738150687
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738150685}
+  m_LocalRotation: {x: 0, y: 0.5, z: 0, w: 0.8660254}
+  m_LocalPosition: {x: -364, y: -275, z: 201}
+  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 60, z: 0}
 --- !u!1 &1766474909
 GameObject:
   m_ObjectHideFlags: 0
@@ -3204,9 +3396,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5539478060274344258, guid: e6be0c62d08c26f4086d31094db7805e, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.45882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 5539478060274344258, guid: e6be0c62d08c26f4086d31094db7805e, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.654902
+      objectReference: {fileID: 0}
+    - target: {fileID: 5539478060274344258, guid: e6be0c62d08c26f4086d31094db7805e, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5663063914987752259, guid: e6be0c62d08c26f4086d31094db7805e, type: 3}
       propertyPath: m_Name
-      value: shootingstar
+      value: shootingstar1_orange
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6be0c62d08c26f4086d31094db7805e, type: 3}
@@ -3858,6 +4062,58 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31d4747b915b552449c136b129f7a120, type: 3}
+--- !u!1 &2024814970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2024814972}
+  - component: {fileID: 2024814971}
+  m_Layer: 0
+  m_Name: ShootingStarSpawner (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2024814971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024814970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d42ad588c740f774d955ddd154870926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootingStar:
+  - {fileID: 1354020585}
+  spawnValue: {x: 10, y: 0, z: 2}
+  spawnWait: 0
+  spawnMostWait: 60
+  spawnLeastWait: 25
+  startWait: 9
+  stop: 0
+--- !u!4 &2024814972
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024814970}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -314, y: -628, z: -74}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2027681738
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4043,7 +4299,7 @@ PrefabInstance:
       objectReference: {fileID: 1046530185}
     - target: {fileID: 3587911616223480815, guid: 1ac3fe955ad35c84faf2e257d653cded, type: 3}
       propertyPath: startMoney
-      value: 2000
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7073688363505358558, guid: 1ac3fe955ad35c84faf2e257d653cded, type: 3}
       propertyPath: roundsText
@@ -4108,6 +4364,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1549416281506265507, guid: abe6d37af1ef9b14dbc320352523292a, type: 3}
   m_PrefabInstance: {fileID: 872234778}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2073879901
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2073879903}
+  - component: {fileID: 2073879902}
+  m_Layer: 0
+  m_Name: ShootingStarSpawner (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2073879902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073879901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d42ad588c740f774d955ddd154870926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootingStar:
+  - {fileID: 1449804283}
+  - {fileID: 1354020585}
+  spawnValue: {x: 10, y: 0, z: 2}
+  spawnWait: 0
+  spawnMostWait: 90
+  spawnLeastWait: 5
+  startWait: 10
+  stop: 0
+--- !u!4 &2073879903
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073879901}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 11, y: -187, z: 414}
+  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!4 &2081231192 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4299162185693728314, guid: 31d4747b915b552449c136b129f7a120, type: 3}
