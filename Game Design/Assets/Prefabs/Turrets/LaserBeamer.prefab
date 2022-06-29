@@ -9869,7 +9869,7 @@ MonoBehaviour:
   lineRenderer: {fileID: -2244009720660406384}
   impactEffect: {fileID: 5164126773465611723}
   impactLight: {fileID: 176719193901827576}
-  laserBeamSfx: {fileID: 8300000, guid: 5ac10dfffcfbfaf4ab8028ad06be38ac, type: 3}
+  laserBeamSfx: {fileID: 8300000, guid: 925c2b06aa563f2488d7ea62f76fc3a3, type: 3}
   laserOn: 0
   enemyTag: Enemy
   partToRotate: {fileID: 5152563069374692506}

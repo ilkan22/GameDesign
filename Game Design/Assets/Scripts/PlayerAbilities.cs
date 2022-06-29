@@ -72,11 +72,16 @@ public class PlayerAbilities : MonoBehaviour
             abilityIMG.color = Color.black;
         }
 
+        if (!duractionActive && duration == 0)
+        {
+            abilityIMG.color = Color.white;
+        }
+
         duration -= Time.deltaTime;        // z�hlt 1 Sekunde runter
         countdown -= Time.deltaTime;        // z�hlt 1 Sekunde runter
         countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);  //Countdown soll nicht negativ werden
         duration = Mathf.Clamp(duration, 0f, Mathf.Infinity);  //Countdown soll nicht negativ werden
-        abilityCountdownText.text = string.Format("AbilityCoolDown " + "{0:00.00}", countdown);
+        abilityCountdownText.text = string.Format("AbilityCoolDown \n" + "{0:00.00}", countdown);
         abilityDurationText.text = string.Format("{0:00.00}", duration);
     }
 

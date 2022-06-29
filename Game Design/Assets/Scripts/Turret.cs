@@ -6,6 +6,7 @@ public class Turret : MonoBehaviour
     private Enemy targetEnemy;
     private bool first = true;
 
+
     [Header("General")]
     public float range = 10f;
 
@@ -61,10 +62,15 @@ public class Turret : MonoBehaviour
                 nearestEnemy = enemy;
             }
         }
+<<<<<<< HEAD
 
   
 
         if (nearestEnemy != null && shortestDistanceToEnemy <= range)
+=======
+  
+        if (nearestEnemy != null && shortestDistanceToEnemy <= range )
+>>>>>>> b3d2c27d72fc2291ebd2c27bcdf99d998693aee8
         {
             target = nearestEnemy.transform;
             targetEnemy = target.GetComponent<Enemy>();
