@@ -1402,6 +1402,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 725318046}
     - target: {fileID: 3587911616223480800, guid: 1ac3fe955ad35c84faf2e257d653cded, type: 3}
+      propertyPath: currentWave
+      value: 
+      objectReference: {fileID: 1103278785}
+    - target: {fileID: 3587911616223480800, guid: 1ac3fe955ad35c84faf2e257d653cded, type: 3}
       propertyPath: waves.Array.size
       value: 6
       objectReference: {fileID: 0}
@@ -2018,6 +2022,17 @@ GameObject:
 --- !u!114 &1103278784 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7876830509099396448, guid: 2ffcb5999d80b254182c89d62493b4a4, type: 3}
+  m_PrefabInstance: {fileID: 1103278782}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1103278785 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 404924962430423248, guid: 2ffcb5999d80b254182c89d62493b4a4, type: 3}
   m_PrefabInstance: {fileID: 1103278782}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
