@@ -21,7 +21,7 @@ public class LevelSelector : MonoBehaviour
             }
             /*else if(i + 1 == levelReached)
             {
-                levelButtons[i].interactable = true;
+                levelButtons[i].interactable = false;
             }*/
         }
     }

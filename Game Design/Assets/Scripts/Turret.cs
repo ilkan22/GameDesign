@@ -4,6 +4,7 @@ public class Turret : MonoBehaviour
 {
     private Transform target;
     private Enemy targetEnemy;
+    private bool first = true;
 
     [Header("General")]
     public float range = 10f;
@@ -28,7 +29,7 @@ public class Turret : MonoBehaviour
     public Transform partToRotate;
     public float turnSpeed = 10f;
     public Transform firePoint;
-    public float targetUpdateTime = 0.5f;
+    public float targetUpdateTime = 0.1f;
     public AudioClip turretShootSfx;
     public AudioClip missileLauncherShootSfx;
 
@@ -38,7 +39,6 @@ public class Turret : MonoBehaviour
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, targetUpdateTime); // Widerholt die funktion jede Anzahl an Sekunden
-        
     }
 
     // Gegnersuche
@@ -50,13 +50,19 @@ public class Turret : MonoBehaviour
 
         foreach (GameObject enemy in enemies)
         {
+            targetEnemy = enemy.GetComponent<Enemy>();
             float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
-            if(distanceToEnemy < shortestDistanceToEnemy)
+
+
+            if (distanceToEnemy < shortestDistanceToEnemy)
             {
                 shortestDistanceToEnemy = distanceToEnemy;
+
                 nearestEnemy = enemy;
             }
         }
+
+  
 
         if (nearestEnemy != null && shortestDistanceToEnemy <= range)
         {
@@ -70,9 +76,11 @@ public class Turret : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (target == null)
         {
             if (useLaserTurret)
+            {
                 if (lineRenderer.enabled)
                 {
                     laserOn = false;
@@ -81,27 +89,30 @@ public class Turret : MonoBehaviour
                     impactEffect.Stop();
                     impactLight.enabled = false;
                 }
-            return;
-        }
-            
-
-        LockOnTarget();
-
-        if (useLaserTurret)
-        {
-            laserOn = true;
-            Laser(laserOn);
+                return;
+            }
         }
         else
         {
-            if (fireCountdown <= 0f)
-            {
-                Shoot();
-                fireCountdown = 1f / fireRate;
-            }
+            LockOnTarget();
 
-            fireCountdown -= Time.deltaTime;
+            if (useLaserTurret)
+            {
+                laserOn = true;
+                Laser(laserOn);
+            }
+            else
+            {
+                if (fireCountdown <= 0f)
+                {
+                    Shoot();
+                    fireCountdown = 1f / fireRate;
+                }
+
+                fireCountdown -= Time.deltaTime;
+            }
         }
+    
     }
 
     void LockOnTarget()
@@ -121,7 +132,6 @@ public class Turret : MonoBehaviour
         //Laser und Licht An
         if (!lineRenderer.enabled)
         {
-
             LaserAudio(_laserOn);
 
             lineRenderer.enabled = true;
@@ -133,6 +143,7 @@ public class Turret : MonoBehaviour
         // Laser Position
         lineRenderer.SetPosition(0, firePoint.position);
         lineRenderer.SetPosition(1, target.position);
+
 
         //Impact Effekt Position
         Vector3 dir = firePoint.position - target.position;
@@ -155,6 +166,7 @@ public class Turret : MonoBehaviour
 
     void Shoot()
     {
+
         GameObject bulletGO = (GameObject)Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
 
         if (this.CompareTag("StandardTurret"))
@@ -167,9 +179,11 @@ public class Turret : MonoBehaviour
             bullet.Seek(target);
     }
 
-    void OnDrawGizmosSelected()
+
+    void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
     }
+    
 }
