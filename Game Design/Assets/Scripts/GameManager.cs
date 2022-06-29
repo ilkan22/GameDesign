@@ -67,15 +67,15 @@ public class GameManager : MonoBehaviour
         if (gameEnded)
             return;
 
-        if (Input.GetKeyDown("e"))
-        {
-            EndGame();
-        }
+        //if (Input.GetKeyDown("e"))
+        //{
+        //    EndGame();
+        //}
 
-        if (Input.GetKeyDown("r"))
-        {
-            WinLevel();
-        }
+        //if (Input.GetKeyDown("r"))
+        //{
+        //    WinLevel();
+        //}
 
         if (PlayerStats.Lives <= 0)
             EndGame();
