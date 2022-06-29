@@ -25,6 +25,7 @@ public class Node : MonoBehaviour
     public AudioClip buyTurretSfx;
     public AudioClip upgradeTurretSfx;
     public AudioClip sellTurretSfx;
+    public AudioClip noMoneySfx;
 
     private void Start()
     {
@@ -56,6 +57,8 @@ public class Node : MonoBehaviour
         if (!buildManager.CanBuild)
             return;
 
+        
+
         BuildTurret(buildManager.GetTurretToBuild());
     }
 
@@ -63,6 +66,7 @@ public class Node : MonoBehaviour
     {
         if (PlayerStats.Money < blueprint.cost)
         {
+            AudioSource.PlayClipAtPoint(noMoneySfx, Camera.main.transform.position);
             Debug.Log("No Moneeey!!!");
             return;
         }
@@ -87,6 +91,7 @@ public class Node : MonoBehaviour
     {
         if(PlayerStats.Money < turretBlueprint.upgradeCost)
         {
+            AudioSource.PlayClipAtPoint(noMoneySfx, Camera.main.transform.position);
             Debug.Log("No Moneeey!!!");
             return;
         }
@@ -116,6 +121,7 @@ public class Node : MonoBehaviour
         AudioSource.PlayClipAtPoint(sellTurretSfx, Camera.main.transform.position);
         GameObject effect = (GameObject)Instantiate(buildManager.sellEffect, GetBuildPosition(), Quaternion.identity);
         Destroy(effect, 5f);
+        isUpgraded = false;
 
         Destroy(turret);
         turretBlueprint = null;
@@ -133,7 +139,9 @@ public class Node : MonoBehaviour
 
         //HoverFarbe der Node Abnhängig vom Geld
         if (buildManager.HasMoney)
+        {
             rend.material.color = hoverColor;
+        }
         else
             rend.material.color = notEnoughMoneyColor;
         

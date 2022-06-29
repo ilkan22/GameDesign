@@ -16,7 +16,7 @@ public class WaveSpawner : MonoBehaviour
     public float timeBetweenWaves = 5f;
     private float countdown = 1f;
 
-    public Text waveCountdownText;
+    //public Text waveCountdownText;
 
     private int waveIndex = 0;
 
@@ -30,6 +30,9 @@ public class WaveSpawner : MonoBehaviour
     private void Update()
     {
         Debug.Log("Update");
+        if (!gameManager.isStarted)
+            return;
+
         if (EnemiesAlive > 0)
         {
             //Debug.Log("RETUUUUUUUUUUUUUUURN");
@@ -54,7 +57,7 @@ public class WaveSpawner : MonoBehaviour
 
 
         countdown = Mathf.Clamp(countdown,0f, Mathf.Infinity);  //Countdown soll nicht negativ werden
-        waveCountdownText.text = string.Format("{0:00.00}",countdown); 
+        //waveCountdownText.text = string.Format("{0:00.00}",countdown); 
     }
 
     // IEnumerator ermöglicht das warten in einer Funktion

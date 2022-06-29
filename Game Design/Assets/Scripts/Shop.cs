@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
 {
     public TurretBlueprint standardTurret;
     public TurretBlueprint missileLauncher;
     public TurretBlueprint LaserBeamer;
+
+    //public Button StandardTurretButton;
 
     BuildManager buildManager;
 
@@ -17,6 +20,7 @@ public class Shop : MonoBehaviour
 
     public void SelectStandardTurret()
     {
+       
         Debug.Log("StandardTurret Selected");
         buildManager.SelectTurretToBuild(standardTurret);
     }
