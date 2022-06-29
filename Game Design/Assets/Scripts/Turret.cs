@@ -4,6 +4,7 @@ public class Turret : MonoBehaviour
 {
     private Transform target;
     private Enemy targetEnemy;
+    private bool first = true;
 
     [Header("General")]
     public float range = 10f;
@@ -38,7 +39,6 @@ public class Turret : MonoBehaviour
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, targetUpdateTime); // Widerholt die funktion jede Anzahl an Sekunden
-        
     }
 
     // Gegnersuche
@@ -50,38 +50,19 @@ public class Turret : MonoBehaviour
 
         foreach (GameObject enemy in enemies)
         {
-      
             targetEnemy = enemy.GetComponent<Enemy>();
-            
             float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
-
-            if (!laserOn)
-            {
-                if (targetEnemy.health != 0 && target != null)
-                {
-                    if (distanceToEnemy >= range)
-                    {
-                        continue;
-                    }
-                    return;
-                }
-            }
-            else
-            {
-                //KA
-            }
-
 
 
             if (distanceToEnemy < shortestDistanceToEnemy)
             {
-
                 shortestDistanceToEnemy = distanceToEnemy;
 
                 nearestEnemy = enemy;
-               
             }
         }
+
+  
 
         if (nearestEnemy != null && shortestDistanceToEnemy <= range)
         {
@@ -95,6 +76,7 @@ public class Turret : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (target == null)
         {
             if (useLaserTurret)
@@ -110,24 +92,27 @@ public class Turret : MonoBehaviour
                 return;
             }
         }
-            
-        LockOnTarget();
-
-        if (useLaserTurret)
-        {
-            laserOn = true;
-            Laser(laserOn);
-        }
         else
         {
-            if (fireCountdown <= 0f)
-            {
-                Shoot();
-                fireCountdown = 1f / fireRate;
-            }
+            LockOnTarget();
 
-            fireCountdown -= Time.deltaTime;
+            if (useLaserTurret)
+            {
+                laserOn = true;
+                Laser(laserOn);
+            }
+            else
+            {
+                if (fireCountdown <= 0f)
+                {
+                    Shoot();
+                    fireCountdown = 1f / fireRate;
+                }
+
+                fireCountdown -= Time.deltaTime;
+            }
         }
+    
     }
 
     void LockOnTarget()
@@ -181,6 +166,7 @@ public class Turret : MonoBehaviour
 
     void Shoot()
     {
+
         GameObject bulletGO = (GameObject)Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
 
         if (this.CompareTag("StandardTurret"))

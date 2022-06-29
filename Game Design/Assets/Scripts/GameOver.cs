@@ -8,6 +8,7 @@ public class GameOver : MonoBehaviour
 {
     public Text roundsText;
     public SceneFader sceneFader;
+    public GameObject ui;
 
 
     public string menuSceneName = "MainMenu";

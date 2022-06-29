@@ -91,6 +91,7 @@ public class Node : MonoBehaviour
     {
         if(PlayerStats.Money < turretBlueprint.upgradeCost)
         {
+            AudioSource.PlayClipAtPoint(noMoneySfx, Camera.main.transform.position);
             Debug.Log("No Moneeey!!!");
             return;
         }

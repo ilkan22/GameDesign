@@ -110,9 +110,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7e2c9ca65b28294e8ea3eac87d9ac71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSpeed: 8
+  startSpeed: 15
   speed: 8
   startHealth: 100
+  health: 0
   moneyGain: 50
   deathEffect: {fileID: 6579891306957681894, guid: 915bafd815a38904cae99a791698e1de, type: 3}
   healthBar: {fileID: 3102676275554959299}
@@ -129,6 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4787bef7f1d8a8648a9e75ba2c853685, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationSpeed: 1
 --- !u!1 &3939781599818098261
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,11 +11,12 @@ public class GameManager : MonoBehaviour
     public GameObject gameOverUI;
     public GameObject completeLevelUI;
     public Button startButton;
+    public bool isStarted = false;
 
     private void Awake()
     {
         startButton.gameObject.SetActive(false);
-        Invoke("timeStop",1f);
+        Invoke("timeStop",0.8f);
     }
 
     private void timeStop()
@@ -34,10 +35,11 @@ public class GameManager : MonoBehaviour
         startButton.onClick.RemoveListener(StartGame);
     }
 
-    private void StartGame()
+    public void StartGame()
     {
         Time.timeScale = 1f;
 
+        isStarted = true;
         // Hides the button
         startButton.gameObject.SetActive(false);
     }
@@ -46,7 +48,19 @@ public class GameManager : MonoBehaviour
     {
         gameEnded = false;
     }
+    public void Toggle(GameObject _ui)
+    {
+        _ui.SetActive(!_ui.activeSelf);
 
+        if (_ui.activeSelf)
+        {
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            Time.timeScale = 1f;
+        }
+    }
     // Update is called once per frame
     void Update()
     {
@@ -69,16 +83,15 @@ public class GameManager : MonoBehaviour
 
     private void EndGame()
     {
+        isStarted = false;
         gameEnded = true;
-        gameOverUI.SetActive(true);
-        Time.timeScale = 0f;
+        Toggle(gameOverUI);
     }
 
     public void WinLevel()
     {
-        
+        isStarted = false;
         gameEnded = true;
-        completeLevelUI.SetActive(true);
-        Time.timeScale = 0f;
+        Toggle(completeLevelUI);
     }
 }
