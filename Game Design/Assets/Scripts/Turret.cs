@@ -75,6 +75,7 @@ public class Turret : MonoBehaviour
     void Update()
     {
 
+
         if (target == null)
         {
             if (useLaserTurret)

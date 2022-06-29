@@ -9860,7 +9860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aa2f7d086d83ee43bd6dac68fee8be9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 30
+  range: 25
   fireRate: 1
   projectilePrefab: {fileID: 0}
   useLaserTurret: 1
