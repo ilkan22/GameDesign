@@ -4,7 +4,7 @@ public class Turret : MonoBehaviour
 {
     private Transform target;
     private Enemy targetEnemy;
-    private bool first = true;
+
 
     [Header("General")]
     public float range = 10f;

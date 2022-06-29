@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     private void timeStop()
     {
         startButton.gameObject.SetActive(true);
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
     }
 
     private void OnEnable()

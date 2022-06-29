@@ -29,6 +29,11 @@ public class WaveSpawner : MonoBehaviour
 
     private void Update()
     {
+        if (!gameManager.isStarted)
+        {
+            return;
+        }
+
         Debug.Log("Update");
         if (!gameManager.isStarted)
             return;
