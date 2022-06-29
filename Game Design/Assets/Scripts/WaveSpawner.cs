@@ -6,7 +6,9 @@ using UnityEngine.UI;
 
 public class WaveSpawner : MonoBehaviour
 {
-  
+
+    public Text currentWave;
+
     public static int EnemiesAlive = 0;
 
     public Wave[] waves;
@@ -29,6 +31,8 @@ public class WaveSpawner : MonoBehaviour
 
     private void Update()
     {
+        currentWave.text = string.Format("Wave " + PlayerStats.Rounds + "/" + waves.Length);
+
         if (!gameManager.isStarted)
         {
             return;
