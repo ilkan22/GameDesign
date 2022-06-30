@@ -2803,6 +2803,7 @@ GameObject:
   - component: {fileID: 659334374725891300}
   - component: {fileID: 7916165296113944178}
   - component: {fileID: 743028909015262416}
+  - component: {fileID: 4501592784982814490}
   m_Layer: 0
   m_Name: Enemy_Simple2
   m_TagString: Enemy
@@ -2810,6 +2811,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4501592784982814490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4501592784982814489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2cd96365c3cf1944836463955494291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
 --- !u!1 &4849481758907957740
 GameObject:
   m_ObjectHideFlags: 0

@@ -34,6 +34,8 @@ public class PlayerAbilities : MonoBehaviour
     private Turret missileLauncher;
     private Turret standardTurret;
 
+    public GameObject boostEffect;
+
 
     // Update is called once per frame
     void Update()
@@ -45,7 +47,7 @@ public class PlayerAbilities : MonoBehaviour
         if ((Input.GetKey("g") && !countDownActive))
         {
             Debug.Log("G GEDR����CKT");
-            AudioSource.PlayClipAtPoint(playerAbilitySfx, Camera.main.transform.position);
+
             countDownActive = true;
             duractionActive = true;
             TowerBoost();
@@ -88,13 +90,16 @@ public class PlayerAbilities : MonoBehaviour
     void TowerBoost()
     {
         Debug.Log("TOWEEEERBOOOOOOOST");
-
+        AudioSource.PlayClipAtPoint(playerAbilitySfx, Camera.main.transform.position);
+      
 
         foreach (GameObject _laserTurret in laserTurrets)
         {
             laserTurret = _laserTurret.GetComponent<Turret>();
             damageOverTimeOld = laserTurret.damageOverTime;
             laserTurret.damageOverTime = laserTurret.damageOverTime * laserDamageOverTimeMultiplier;
+            GameObject effectInstance = (GameObject)Instantiate(boostEffect, _laserTurret.transform);
+            Destroy(effectInstance, abilityDuration);
         }
 
         foreach (GameObject _missileLauncher in missileLaunchers)
@@ -104,6 +109,8 @@ public class PlayerAbilities : MonoBehaviour
             missileRangeOld = missileLauncher.range;
             missileLauncher.fireRate = missileLauncher.fireRate * fireRateMultiplier;
             missileLauncher.range = missileLauncher.range * rangeMultiplier;
+            GameObject effectInstance = (GameObject)Instantiate(boostEffect, _missileLauncher.transform);
+            Destroy(effectInstance, abilityDuration);
         }
 
         foreach (GameObject _standardTurret in standardTurrets)
@@ -113,26 +120,48 @@ public class PlayerAbilities : MonoBehaviour
             standardRangeOld = standardTurret.range;
             standardTurret.fireRate = standardTurret.fireRate * fireRateMultiplier;
             standardTurret.range = standardTurret.range * rangeMultiplier;
+            GameObject effectInstance = (GameObject)Instantiate(boostEffect, _standardTurret.transform);
+            Destroy(effectInstance, abilityDuration);
         }
     }
     void TowerBoostOff()
     {
-        foreach (GameObject _laserTurret in laserTurrets)
+
+
+        for (int i = 0; i < laserTurrets.Length; i++)
         {
-            laserTurret.damageOverTime = damageOverTimeOld;
+            laserTurrets[i].GetComponent<Turret>().damageOverTime = damageOverTimeOld;
+
         }
 
-        foreach (GameObject _missileLauncher in missileLaunchers)
+        //foreach (GameObject _laserTurret in laserTurrets)
+        //{
+        //    laserTurret.damageOverTime = damageOverTimeOld;
+        //}
+
+        for (int i = 0; i < missileLaunchers.Length; i++)
         {
-            missileLauncher.fireRate = missileFireRateOld;
-            missileLauncher.range = missileRangeOld;
+            missileLaunchers[i].GetComponent<Turret>().fireRate = standardFireRateOld;
+            missileLaunchers[i].GetComponent<Turret>().range = standardRangeOld;
         }
 
-        foreach (GameObject _standardTurret in standardTurrets)
+        //foreach (GameObject _missileLauncher in missileLaunchers)
+        //{
+        //    missileLauncher.fireRate = missileFireRateOld;
+        //    missileLauncher.range = missileRangeOld;
+        //}
+
+        for (int i = 0; i < standardTurrets.Length; i++)
         {
-            standardTurret.fireRate = standardFireRateOld;
-            standardTurret.range = standardRangeOld;
+            standardTurrets[i].GetComponent<Turret>().fireRate = standardFireRateOld;
+            standardTurrets[i].GetComponent<Turret>().range = standardRangeOld;
         }
+
+        //foreach (GameObject _standardTurret in standardTurrets)
+        //{
+        //    standardTurret.fireRate = standardFireRateOld;
+        //    standardTurret.range = standardRangeOld;
+        //}
     }
 
 }

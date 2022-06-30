@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 1181130079536057720}
   m_Layer: 0
   m_Name: MissileLauncher_Upgraded1
-  m_TagString: Untagged
+  m_TagString: MissileLauncher
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aa2f7d086d83ee43bd6dac68fee8be9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 36
+  range: 30
   fireRate: 1.5
   projectilePrefab: {fileID: 5114437504195955056, guid: fa4169166aa916742a4849e7fafba356, type: 3}
   useLaserTurret: 0

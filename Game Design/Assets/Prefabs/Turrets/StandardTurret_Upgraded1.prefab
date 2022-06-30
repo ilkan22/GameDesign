@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 5747135309866792975}
   m_Layer: 0
   m_Name: StandardTurret_Upgraded1
-  m_TagString: Untagged
+  m_TagString: StandardTurret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aa2f7d086d83ee43bd6dac68fee8be9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 18
+  range: 20
   fireRate: 6
   projectilePrefab: {fileID: 1732055791230596801, guid: 3a808fad3bfe3404c9dbea0d00bc4134, type: 3}
   useLaserTurret: 0
