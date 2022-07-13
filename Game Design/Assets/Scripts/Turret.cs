@@ -4,6 +4,7 @@ public class Turret : MonoBehaviour
 {
     private Transform target;
     private Enemy targetEnemy;
+    public bool isUpgraded = false;
 
 
     [Header("General")]
@@ -75,7 +76,6 @@ public class Turret : MonoBehaviour
     void Update()
     {
 
-
         if (target == null)
         {
             if (useLaserTurret)
@@ -93,7 +93,11 @@ public class Turret : MonoBehaviour
         }
         else
         {
+
+            //TARGET LOCKED
             LockOnTarget();
+
+
 
             if (useLaserTurret)
             {
@@ -104,7 +108,17 @@ public class Turret : MonoBehaviour
             {
                 if (fireCountdown <= 0f)
                 {
-                    Shoot();
+                    if (this.CompareTag("MissileLauncher") && isUpgraded)
+                    {
+                        ShootUpgradedMissileLauncher();
+
+                        Invoke("ShootUpgradedMissileLauncher", 0.2f);
+
+                    }
+                    else
+                    {
+                        Shoot();
+                    }
                     fireCountdown = 1f / fireRate;
                 }
 
@@ -168,6 +182,8 @@ public class Turret : MonoBehaviour
 
         GameObject bulletGO = (GameObject)Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
 
+        
+
         if (this.CompareTag("StandardTurret"))
             AudioSource.PlayClipAtPoint(turretShootSfx, Camera.main.transform.position);
         else
@@ -176,6 +192,19 @@ public class Turret : MonoBehaviour
         Bullet bullet = bulletGO.GetComponent<Bullet>();
         if (bullet != null)
             bullet.Seek(target);
+    }
+
+    void ShootUpgradedMissileLauncher()
+    {
+        GameObject bulletGO = (GameObject)Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
+        AudioSource.PlayClipAtPoint(missileLauncherShootSfx, Camera.main.transform.position);
+
+
+        Bullet bullet = bulletGO.GetComponent<Bullet>();
+
+        if (bullet != null)
+            bullet.Seek(target);
+
     }
 
 

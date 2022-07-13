@@ -1522,12 +1522,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1381365535}
     - target: {fileID: 8297430471772230741, guid: 1ac3fe955ad35c84faf2e257d653cded, type: 3}
+      propertyPath: nextLevel
+      value: EndScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297430471772230741, guid: 1ac3fe955ad35c84faf2e257d653cded, type: 3}
       propertyPath: sceneFader
       value: 
       objectReference: {fileID: 1381365535}
     - target: {fileID: 8297430471772230741, guid: 1ac3fe955ad35c84faf2e257d653cded, type: 3}
       propertyPath: levelToUnlock
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ac3fe955ad35c84faf2e257d653cded, type: 3}

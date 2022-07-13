@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour
     public GameObject impactEffect;
 
     public float speed = 60f;
-    public int damage = 20;
+    public float damage = 20;
     public float explosionRadius = 0f;
     public AudioClip missileLauncherExplosionSfx;
 
