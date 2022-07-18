@@ -11,7 +11,8 @@ public class RoundsSurvived : MonoBehaviour
     private void OnEnable()
     {
         roundsText.text = PlayerStats.Rounds.ToString();
-        StartCoroutine(AnimateText());
+        //StartCoroutine(AnimateText());
+        AnimateText();
     }
 
 
