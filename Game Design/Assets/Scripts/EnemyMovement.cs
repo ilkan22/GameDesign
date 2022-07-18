@@ -29,7 +29,7 @@ public class EnemyMovement : MonoBehaviour
 
         transform.Translate(direction.normalized * enemy.speed * Time.deltaTime, Space.World); // Bewegt sich richtung Richtungsvektor
 
-        if (Vector3.Distance(transform.position, target.position) <= 0.3f)  // Gegner erreicht den Waypoint
+        if (Vector3.Distance(transform.position, target.position) <= 0.5f)  // Gegner erreicht den Waypoint
             GetNextWayPoint();
 
         // Speed nach Laser zurückgesetzt funktioniert wegen UpdateLoop | Offset vlt bei 1Frame

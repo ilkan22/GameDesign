@@ -12,10 +12,26 @@ public class Shop : MonoBehaviour
     //public Button StandardTurretButton;
 
     BuildManager buildManager;
+    public Button[] turretItems;
 
+    
     private void Start()
     {
         buildManager = BuildManager.BuildmanagerInstance;
+
+        int levelReached = PlayerPrefs.GetInt("levelReached", 1);
+
+        for (int i = 0; i < turretItems.Length; i++)
+        {
+            if (i + 1 > levelReached)
+            {
+                turretItems[i].interactable = false;
+            }
+            /*else if(i + 1 == levelReached)
+            {
+                levelButtons[i].interactable = false;
+            }*/
+        }
     }
 
     public void SelectStandardTurret()

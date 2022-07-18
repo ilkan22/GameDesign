@@ -96,6 +96,8 @@ public class Node : MonoBehaviour
             return;
         }
 
+        
+
         PlayerStats.Money -= turretBlueprint.upgradeCost;
 
         //Alter Turret entfernen
@@ -104,6 +106,7 @@ public class Node : MonoBehaviour
         //Baue neue Turret
         GameObject _turret = (GameObject)Instantiate(turretBlueprint.upgradedPrefab, GetBuildPosition(), Quaternion.identity);
         turret = _turret;
+        turret.GetComponent<Turret>().isUpgraded = true;
 
         AudioSource.PlayClipAtPoint(upgradeTurretSfx, Camera.main.transform.position);
         GameObject effect = (GameObject)Instantiate(buildManager.buildEffect, GetBuildPosition(), Quaternion.identity);
