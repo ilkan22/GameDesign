@@ -22,11 +22,8 @@ public class GameManager : MonoBehaviour
     private void timeStop()
     {
         startButton.gameObject.SetActive(true);
-<<<<<<< HEAD
         Time.timeScale = 0f;
-=======
-        //Time.timeScale = 0f;
->>>>>>> b3d2c27d72fc2291ebd2c27bcdf99d998693aee8
+
     }
 
     private void OnEnable()
@@ -71,22 +68,11 @@ public class GameManager : MonoBehaviour
         if (gameEnded)
             return;
 
-        //if (Input.GetKeyDown("e"))
-        //{
-        //    EndGame();
-        //}
 
-<<<<<<< HEAD
         if (Input.GetKeyDown("r"))
         {
             WinLevel();
         }
-=======
-        //if (Input.GetKeyDown("r"))
-        //{
-        //    WinLevel();
-        //}
->>>>>>> b3d2c27d72fc2291ebd2c27bcdf99d998693aee8
 
         if (PlayerStats.Lives <= 0)
             EndGame();
