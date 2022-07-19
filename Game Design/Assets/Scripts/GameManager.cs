@@ -22,7 +22,8 @@ public class GameManager : MonoBehaviour
     private void timeStop()
     {
         startButton.gameObject.SetActive(true);
-        //Time.timeScale = 0f;
+        Time.timeScale = 0f;
+
     }
 
     private void OnEnable()
@@ -67,15 +68,11 @@ public class GameManager : MonoBehaviour
         if (gameEnded)
             return;
 
-        //if (Input.GetKeyDown("e"))
-        //{
-        //    EndGame();
-        //}
 
-        //if (Input.GetKeyDown("r"))
-        //{
-        //    WinLevel();
-        //}
+        if (Input.GetKeyDown("r"))
+        {
+            WinLevel();
+        }
 
         if (PlayerStats.Lives <= 0)
             EndGame();

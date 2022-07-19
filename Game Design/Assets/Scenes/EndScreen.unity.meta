@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Game Design/Assets/Scenes/Demo.unity.meta
+guid: 543d6ea1ee50ca141b4be4f222a77fde
+========
 guid: 6f5ea09d9d71c5c4d843e458bf7705a5
+>>>>>>>> b3d2c27d72fc2291ebd2c27bcdf99d998693aee8:Game Design/Assets/Scenes/EndScreen.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

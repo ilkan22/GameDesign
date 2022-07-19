@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: 49df8e45d398df240b34e791dabf976e
+=======
 guid: 7349dfed0a5e00d4d896d3bd03d54e27
+>>>>>>> b3d2c27d72fc2291ebd2c27bcdf99d998693aee8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -24,6 +28,10 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+<<<<<<< HEAD
+  ignoreMasterTextureLimit: 0
+=======
+>>>>>>> b3d2c27d72fc2291ebd2c27bcdf99d998693aee8
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 1
@@ -88,6 +96,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+<<<<<<< HEAD
+    nameFileIdTable: {}
+=======
+>>>>>>> b3d2c27d72fc2291ebd2c27bcdf99d998693aee8
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
