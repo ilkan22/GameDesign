@@ -3,6 +3,7 @@ using UnityEngine;
 public class Turret : MonoBehaviour
 {
     private Transform target;
+    public Transform targetLocked;
     private Enemy targetEnemy;
     public bool isUpgraded = false;
 
@@ -94,10 +95,9 @@ public class Turret : MonoBehaviour
         else
         {
 
+
             //TARGET LOCKED
             LockOnTarget();
-
-
 
             if (useLaserTurret)
             {
